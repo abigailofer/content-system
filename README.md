@@ -1,10 +1,10 @@
-# Hoover Content System (HCS)
+# Content System
 
 A skill-based system for content creation. Each skill is a structured package with defined inputs, workflows, templates, and quality criteria.
 
 ## What This Is
 
-HCS provides repeatable skills for:
+Content System provides repeatable skills for:
 
 - **UX Writing** – Error messages, empty states, dialogs, notifications, forms, onboarding
 - **Content Design** – UI copy systems, patterns, audits, naming, cognitive load
