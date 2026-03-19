@@ -48,7 +48,7 @@ chart:
 ```yaml
 hero_image:
   type: "informative"
-  alt: "Person using laptop on outdoor patio, summer collection"
+  alt: "Person using laptop on outdoor patio, summer collection."
 
 background:
   type: "decorative"
@@ -57,11 +57,11 @@ background:
 
 product_photo:
   type: "informative"
-  alt: "ProBook 15 laptop, silver, shown open at 45-degree angle"
+  alt: "ProBook 15 laptop, silver, shown open at 45-degree angle."
 
 chart:
   type: "complex"
-  alt: "Bar chart: Customer satisfaction increased 23% year over year"
+  alt: "Bar chart: Customer satisfaction increased 23% year over year."
   aria_describedby: "chart-description"
 ```
 
@@ -70,6 +70,7 @@ chart:
 - Decorative images don't distract screen reader users
 - Product images identify the specific product
 - Charts summarize the key insight, with data available
+- Alt text ends with a period (style guide §6.1.4)
 - Meets WCAG 1.1.1 Non-text Content
 
 ---
@@ -85,10 +86,10 @@ buttons:
   - label: "Save"
   - label: "Save"       # Duplicate!
   - label: "Submit"
-  - label: "Click to Delete"
+  - label: "Click to delete"
   - label: "X"
   - label: "Proceed"    # COGA P3: unfamiliar pattern
-  - label: "Go Forth"   # COGA P3: unclear verb
+  - label: "Go forth"   # COGA P3: unclear verb
 ```
 
 ### After (accessible)
@@ -107,8 +108,8 @@ buttons:
     action: "Permanently removes document"
     aria_describedby: "delete-warning"
 
-  - label: "Close"
-    aria_label: "Close dialog"
+  - label: "Close Dialog"
+    aria_label: "Close Dialog"
 
   - label: "Continue"
     # COGA P3: familiar, expected verb
@@ -119,8 +120,8 @@ buttons:
 
 ### Why it works
 - Each button is unique and specific (WCAG 2.4.6, 4.1.2)
-- Action + object pattern makes purpose clear
-- Icon-only buttons have accessible names
+- Action + object pattern makes purpose clear (style guide §11.4.2)
+- Title case throughout (style guide §4.1.1)
 - Labels use conventional, familiar verbs (COGA P3)
 - No duplicate ambiguous labels (WCAG 3.2.4)
 
@@ -181,6 +182,7 @@ When a screen reader user pulls up a list of all links on the page:
 
 ### Why it works
 - Each link is meaningful without surrounding context (WCAG 2.4.9)
+- No "click here" — use "select" for actions (style guide §7.1)
 - File format and size disclosed for downloads (WCAG 2.4.4)
 - No duplicates that confuse navigation
 - Destinations are clear (WCAG 2.4.6)
@@ -235,12 +237,12 @@ form:
         aria_describedby: "email-help"
       help_text:
         id: "email-help"
-        text: "We'll send confirmation to this address"
+        text: "We'll send confirmation to this address."
         # Format guidance before submission — WCAG 3.3.2
 
     - name: "phone"
       label:
-        text: "Phone number"
+        text: "Phone number (optional)"
         for: "phone"
       input:
         id: "phone"
@@ -250,12 +252,13 @@ form:
       error:
         id: "phone-error"
         role: "alert"
-        text: "Enter a valid phone number (e.g., 555-123-4567)."
+        text: "Enter a valid phone number (e.g., 555-123-4567)"
+        # No period on validation errors — style guide §4.4.2
         # States what's wrong and how to fix it — WCAG 3.3.1, COGA P6
 
     - name: "company"
       label:
-        text: "Company"
+        text: "Company (optional)"
         for: "company"
       input:
         id: "company"
@@ -266,6 +269,8 @@ form:
 - Visible labels always present, not just placeholder (WCAG 3.3.2)
 - Labels programmatically associated with inputs (WCAG 2.4.6)
 - Help text connected via aria-describedby
+- Optional fields clearly marked (WCAG 3.3.2)
+- Validation errors have no trailing period (style guide §4.4.2)
 - Errors identify field and suggest format (WCAG 3.3.1, COGA P6)
 - Required fields indicated accessibly (WCAG 4.1.2)
 
@@ -310,10 +315,10 @@ checkout_error:
   visual: "Red banner with error icon + text label"
   # Icon + text, not color alone — WCAG 1.4.1
   announcement:
-    text: "Payment failed. Please check your card details and try again."
+    text: "Payment didn't go through. Check your card details and try again."
     aria_live: "assertive"
     role: "alert"
-    # WCAG 4.1.3: polite, neutral tone — COGA P7
+    # WCAG 4.1.3: neutral tone — COGA P7
 
 form_submission:
   visual: "Success checkmark"
@@ -325,6 +330,7 @@ form_submission:
 
 ### Why it works
 - Status changes announced to screen readers (WCAG 4.1.3)
+- Toast pattern follows `{action} + {object}` structure (style guide §11.13)
 - Polite announcements for routine updates; assertive for critical errors
 - Content is specific and references the affected element (WCAG 4.1.3)
 - Error uses neutral, blame-free language (COGA P7)
@@ -367,13 +373,15 @@ chart:
     location: "Below chart, expandable"
 
   design:
-    patterns: true        # Not color alone — WCAG 1.4.1
-    labels: "On each bar" # Text labels supplement color
+    patterns: true
+    # Not color alone — WCAG 1.4.1
+    labels: "On each bar"
+    # Text labels supplement color
     legend: "Pattern + color key"
 ```
 
 ### Why it works
-- Alt text gives key insight, not just "chart" (WCAG 1.1.1)
+- Alt text gives key insight, not just "chart"; ends with a period (WCAG 1.1.1, style guide §11.3)
 - Full data available in text form (WCAG 1.1.1)
 - Data table as alternative for detailed exploration
 - Visual design uses patterns and labels, not color alone (WCAG 1.4.1)
@@ -400,21 +408,23 @@ errors:
 ```yaml
 errors:
   - field: "card_number"
-    text: "Enter a valid 16-digit card number."
+    text: "Enter a valid 16-digit card number"
+    # No period on validation errors — style guide §4.4.2
     aria_invalid: true
     aria_describedby: "card-error"
     # States what's wrong and how to fix — WCAG 3.3.1, COGA P6
 
   - field: "expiry"
-    text: "Expiry date must be in MM/YY format (e.g., 09/27)."
-    # Includes example — WCAG 3.3.1
+    text: "Expiry date must be in MM/YY format (e.g., 09/27)"
+    # No period on validation errors — style guide §4.4.2
 
   - field: "cvv"
-    text: "CVV is the 3-digit code on the back of your card."
-    # Explains where to find the value
+    text: "CVV is the 3-digit code on the back of your card"
+    # No period on validation errors — style guide §4.4.2
 
   - type: "payment_failure"
     text: "Payment didn't go through. Try another card or contact your bank."
+    # System error — period used — style guide §12.3
     role: "alert"
     aria_live: "assertive"
     help_link:
@@ -424,6 +434,7 @@ errors:
 
   - type: "session_expired"
     text: "Your session timed out. Sign in again to continue."
+    # System error — period used — style guide §12.3
     help_link:
       text: "Sign in"
       href: "/login"
@@ -431,6 +442,8 @@ errors:
 ```
 
 ### Why it works
+- Validation errors have no trailing period (style guide §4.4.2, §12.2.1)
+- System errors end with a period (style guide §4.4.1)
 - Each error explains what went wrong and how to fix it (WCAG 3.3.1, COGA P6)
 - Errors are programmatically associated with their fields (WCAG 3.3.1)
 - Tone is neutral, task-focused, not blaming (COGA P7)
@@ -516,7 +529,6 @@ promo_modal:
   dismiss: null
   # No way to dismiss — WCAG 2.2.4
   focus: "Not managed"
-  # Focus not moved into modal
 
 delete_action:
   button: "Delete"
@@ -544,12 +556,15 @@ promo_modal:
 delete_action:
   button:
     label: "Delete Account"
+    # Title case, verb + noun — style guide §11.4.1
   confirmation_dialog:
-    heading: "Delete your account?"
-    body: "This will permanently remove your data. You cannot undo this action."
+    heading: "Delete Account?"
+    # Title format: action + question mark — style guide §11.11.2
+    body: "This permanently removes your account and its data. You cannot undo this action."
     confirm_label: "Delete Account"
+    # Primary CTA matches title action — style guide §11.11.2
     cancel_label: "Cancel"
-    # Confirmation before destructive action — WCAG 3.3.6
+    # WCAG 3.3.6: confirmation before destructive action
   success_announcement:
     text: "Account deleted."
     aria_live: "polite"
@@ -559,6 +574,8 @@ delete_action:
 - Modal can be dismissed or snoozed (WCAG 2.2.4)
 - Dismiss controls are keyboard accessible and clearly labeled (WCAG 2.2.4)
 - Focus is managed correctly on open and close (WCAG 2.2.4)
+- Confirmation modal title uses action + question mark format (style guide §11.11.2)
+- Primary CTA matches the title action (style guide §11.11.2)
 - Destructive action requires confirmation (WCAG 3.3.6)
 
 ---
@@ -585,14 +602,14 @@ login:
 ```yaml
 login:
   primary_method:
-    label: "Sign in with passkey"
+    label: "Sign In With Passkey"
     type: "passkey"
     # Cognitive-free option is primary — WCAG 3.3.9
 
   alternative_methods:
-    - label: "Sign in with magic link"
+    - label: "Sign In With Magic Link"
       type: "magic_link"
-    - label: "Sign in with password"
+    - label: "Sign In With Password"
       type: "password"
       field:
         paste_allowed: true
@@ -607,7 +624,7 @@ login:
       # Direct help on blocking step — COGA P8
 
   setup_guidance:
-    text: "Set up passkey sign-in"
+    text: "Set Up Passkey Sign-In"
     plain_language: true
     # Accessible setup instructions — WCAG 3.3.9
 ```
@@ -648,16 +665,16 @@ onboarding:
   step2: "After you sign in, start."
   # Plain words — COGA P1
 
-  step3: "Click View to see your results."
-  # Action first — COGA P2
+  step3: "Select View to see your results."
+  # Action first — COGA P2; "select" not "click" — style guide §7.1
 
   step4:
     intro: "To create your account:"
     steps:
       - "Enter your name"
       - "Enter your email"
-      - "Click Submit"
-    # Chunked into steps — COGA P4
+      - "Select Submit"
+    # Chunked into steps — COGA P4; "select" not "click" — style guide §7.1
 
   error: "The code didn't match. Try again."
   # Neutral, task-focused — COGA P7
@@ -677,6 +694,7 @@ onboarding:
 ### Why it works
 - Common words and short sentences (COGA P1)
 - Action or outcome stated first (COGA P2)
+- "Select" used instead of "click" (style guide §7.1)
 - Multi-step instructions chunked into a numbered list (COGA P4)
 - Errors are neutral and task-focused (COGA P7)
 - Icons paired with text labels (COGA P9)
@@ -692,8 +710,9 @@ onboarding:
 |---------|---------|-----|
 | `alt="image"` | Meaningless | Describe what matters |
 | `alt="IMG_2847.jpg"` | Filename, not content | Write description |
+| Alt text with no trailing period | Incomplete style | End alt text with a period |
 | Placeholder as label | Disappears, accessibility fail | Use visible label |
-| "Click here" | Meaningless out of context | Describe destination |
+| "Click here" | Meaningless out of context; wrong verb | Use "select" and describe destination |
 | "Read more" x 5 | Indistinguishable | Make each unique |
 | Color-only error | Invisible to colorblind | Add icon + text |
 | `<div onclick>` | Not keyboard accessible | Use `<button>` |
@@ -704,13 +723,15 @@ onboarding:
 | "You entered the wrong code" | Blaming language | "The code didn't match. Try again." |
 | Icon-only buttons | No text for cognitive or AT users | Pair icon with label |
 | "Enter the amount you set earlier" | Requires memory | Repeat the value inline |
-| "To see results, click View" | Purpose buried at end | "Click View to see results" |
+| "To see results, select View" | Purpose buried at end | "Select View to see results" |
 | "Fill out name, email, then submit" | Wall of instructions | Number or bullet the steps |
 | "Error." | Vague, no guidance | State the problem and the fix |
-| "Click the green button" | Sensory-only instruction | "Click the Start button" |
+| "Click the green button" | Sensory-only instruction; wrong verb | "Select the Start button" |
 | Paste blocked on password field | Forces manual transcription | Allow paste and autofill |
 | No confirmation before delete | Irreversible without warning | Add confirmation dialog + undo |
 | Navigation labels differ mobile/desktop | Inconsistent identification | Use identical labels everywhere |
+| Period on validation error | Contradicts style guide | Remove period from validation errors |
+| "enable" / "disable" | Avoided terms | Use "turn on" / "turn off" |
 
 ### Test questions
 Before shipping, verify:
@@ -725,3 +746,5 @@ Before shipping, verify:
 8. **Blame test**: Does any error message say "you" in an accusatory way?
 9. **Icon test**: Does every icon have a visible text label alongside it?
 10. **Links list test (WCAG 2.4.9)**: Would a screen reader links list be unambiguous?
+11. **Verb test**: Does all copy use "select" instead of "click"?
+12. **Period test**: Do validation errors omit a trailing period? Do alt texts and body text include one?
