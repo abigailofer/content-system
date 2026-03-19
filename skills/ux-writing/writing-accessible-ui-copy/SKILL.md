@@ -339,6 +339,7 @@ modal:
 - [ ] Paste blocked on password or code fields — WCAG 3.3.8
 - [ ] Period on validation errors — style guide §4.4.2
 - [ ] Missing period on alt text — style guide §6.1.4
+- [ ] Duplicate examples — if a format example appears in the placeholder, remove it from surrounding body or help text
 
 ---
 
