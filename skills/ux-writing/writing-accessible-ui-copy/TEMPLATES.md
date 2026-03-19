@@ -173,6 +173,7 @@ form_field:
     text: "[Example value only, e.g. name@example.com]"
     # Never the only label — WCAG 3.3.2, style guide §11.7.5
     # Do not repeat label — style guide §11.7.5
+    # If example is in placeholder, remove it from help text or body copy — avoid duplication
 
   error:
     text: "[What's wrong]. [How to fix it]"   # WCAG 3.3.1, COGA P6
