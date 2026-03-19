@@ -1,9 +1,9 @@
+# Writing Confirmation Dialogs
+
 ---
 name: writing-confirmation-dialogs
 description: Write clear confirmation dialogs for user actions. Use when users trigger irreversible actions, destructive operations, or significant state changes that require explicit consent.
 ---
-
-# Writing Confirmation Dialogs
 
 ## Quick start
 Collect or infer:
@@ -14,26 +14,52 @@ Collect or infer:
 
 Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md](RUBRIC.md).
 
+---
+
 ## Workflow
 1. Classify the action's severity and reversibility
-2. Write the headline (what will happen)
-3. Write the body (consequences, if not obvious)
-4. Write confirm button (specific verb matching action)
-5. Write cancel button (safe exit)
+2. Write the headline (what will happen) — sentence case, no period
+3. Write the body (consequences, if not obvious) — sentence case, ends with period
+4. Write confirm button (specific verb matching action) — title case, no period
+5. Write cancel button (safe exit) — title case, no period
 6. Run the rubric check. Revise until it passes.
+
+---
 
 ## Degrees of freedom
 - **Low**: Structure (headline + body + confirm + cancel) is fixed
 - **Medium**: Body length varies by complexity of consequences
 - **Allowed variation**: Body can be omitted for simple reversible actions
 
+---
+
 ## Constraints
-- Headline: max 60 characters
-- Body: max 200 characters
-- Confirm button: max 20 characters, must be specific verb
-- Cancel button: max 15 characters
-- Confirm button must NOT be generic "Yes" or "OK"
-- Destructive actions use red/warning button styling (note in output)
+
+| Element | Case | Period | Max length | Other |
+|---------|------|--------|------------|-------|
+| Headline (H2) | Sentence case | No | 60 chars | Must state what will happen |
+| Body | Sentence case | Yes | 200 chars | Optional for simple reversible actions |
+| Confirm button | Title case | No | 20 chars | Must be specific verb; not "Yes", "OK", "Confirm", "Submit" |
+| Cancel button | Title case | No | 15 chars | Must provide safe exit |
+
+### Approved single-word confirm button exceptions
+The following single-word labels are approved without a noun:
+- Save
+- Done
+- Apply
+- Delete
+- Remove
+- Archive
+- Discard
+- Edit
+
+### Approved cancel button labels
+- Cancel
+- Quit *(when all progress will be lost)*
+- Stop *(when progress is saved but activity ends)*
+- Keep [item] *(when it's clearer than "Cancel")*
+
+---
 
 ## References
 - Templates: [TEMPLATES.md](TEMPLATES.md)
