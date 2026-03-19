@@ -85,25 +85,25 @@ buttons:
   - label: "Save"
   - label: "Save"       # Duplicate!
   - label: "Submit"
-  - label: "Click to delete"
+  - label: "Click to Delete"
   - label: "X"
   - label: "Proceed"    # COGA P3: unfamiliar pattern
-  - label: "Go forth"   # COGA P3: unclear verb
+  - label: "Go Forth"   # COGA P3: unclear verb
 ```
 
 ### After (accessible)
 ```yaml
 buttons:
-  - label: "Save draft"
+  - label: "Save Draft"
     action: "Saves current document as draft"
 
-  - label: "Save and publish"
+  - label: "Save and Publish"
     action: "Saves and makes document public"
 
-  - label: "Submit for review"
+  - label: "Submit for Review"
     action: "Sends to approver"
 
-  - label: "Delete document"
+  - label: "Delete Document"
     action: "Permanently removes document"
     aria_describedby: "delete-warning"
 
@@ -240,8 +240,7 @@ form:
 
     - name: "phone"
       label:
-        text: "Phone number (optional)"
-        # Optional clearly indicated — WCAG 3.3.2
+        text: "Phone number"
         for: "phone"
       input:
         id: "phone"
@@ -256,7 +255,7 @@ form:
 
     - name: "company"
       label:
-        text: "Company (optional)"
+        text: "Company"
         for: "company"
       input:
         id: "company"
@@ -267,7 +266,6 @@ form:
 - Visible labels always present, not just placeholder (WCAG 3.3.2)
 - Labels programmatically associated with inputs (WCAG 2.4.6)
 - Help text connected via aria-describedby
-- Optional fields clearly marked (WCAG 3.3.2)
 - Errors identify field and suggest format (WCAG 3.3.1, COGA P6)
 - Required fields indicated accessibly (WCAG 4.1.2)
 
@@ -545,11 +543,11 @@ promo_modal:
 
 delete_action:
   button:
-    label: "Delete account"
+    label: "Delete Account"
   confirmation_dialog:
     heading: "Delete your account?"
-    body: "This will permanently remove your data. This cannot be undone."
-    confirm_label: "Yes, delete my account"
+    body: "This will permanently remove your data. You cannot undo this action."
+    confirm_label: "Delete Account"
     cancel_label: "Cancel"
     # Confirmation before destructive action — WCAG 3.3.6
   success_announcement:
