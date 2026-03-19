@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Confirmation Dialogs
+
+---
 
 ## Example 1: Delete single item
+
 **Input:**
 - Action: Delete a document
 - Item name: "Q4 Report.docx"
@@ -11,7 +14,7 @@
 ```yaml
 confirmation_dialog:
   headline: "Delete \"Q4 Report.docx\"?"
-  body: "This can't be undone."
+  body: "You cannot undo this action."
   confirm:
     label: "Delete"
     style: "destructive"
@@ -22,6 +25,7 @@ confirmation_dialog:
 ---
 
 ## Example 2: Remove team member
+
 **Input:**
 - Action: Remove person from team
 - Person: "Alex Chen"
@@ -44,6 +48,7 @@ confirmation_dialog:
 ---
 
 ## Example 3: Archive (reversible action)
+
 **Input:**
 - Action: Archive a project
 - Item name: "Website Redesign"
@@ -65,6 +70,7 @@ confirmation_dialog:
 ---
 
 ## Example 4: Bulk delete
+
 **Input:**
 - Action: Delete multiple files
 - Count: 23 files
@@ -75,7 +81,7 @@ confirmation_dialog:
 ```yaml
 confirmation_dialog:
   headline: "Delete 23 files?"
-  body: "This will permanently delete all selected files. This can't be undone."
+  body: "This will permanently delete all selected files. You cannot undo this action."
   confirm:
     label: "Delete 23 files"
     style: "destructive"
@@ -86,6 +92,7 @@ confirmation_dialog:
 ---
 
 ## Example 5: Leave organization
+
 **Input:**
 - Action: User leaving an organization
 - Organization: "Acme Corp"
@@ -98,16 +105,16 @@ confirmation_dialog:
   headline: "Leave Acme Corp?"
   body: "You'll lose access to all shared projects and files. You'll need a new invitation to rejoin."
   confirm:
-    label: "Leave organization"
+    label: "Leave Organization"
     style: "destructive"
   cancel:
-    label: "Stay"
+    label: "Cancel"
 ```
-Note: "Stay" is clearer than "Cancel" here because it explicitly describes the safe outcome.
 
 ---
 
 ## Edge case: Discard unsaved changes
+
 **Input:**
 - Action: Navigate away with unsaved changes
 - Context: User edited a form and clicked away
