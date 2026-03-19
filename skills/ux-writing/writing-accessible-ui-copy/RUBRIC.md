@@ -1,6 +1,5 @@
 # Rubric: Writing Accessible UI Copy
 
-
 Evaluation criteria for accessible content across four proficiency levels.
 
 ---
@@ -33,24 +32,26 @@ Evaluation criteria for accessible content across four proficiency levels.
 ---
 
 ## Dimension 1: Alt text quality
-*WCAG 1.1.1*
+*WCAG 1.1.1, style guide §6.1, §11.2, §11.3*
 
 ### Level 4 — Expert
 - All images have appropriate alt text (informative, decorative, or functional)
 - Complex images have extended descriptions via aria-describedby or linked page
 - Alt text is concise yet complete (under 125 chars for simple images)
+- Alt text ends with a period (style guide §6.1.4)
 - Context-appropriate: same image may have different alt in different contexts
 - No redundant "image of" or "photo of" prefixes
 - Time-based media (video, audio) has captions or transcripts
+- Charts and graphs describe type, key trends, and insight (style guide §11.3)
 
 ### Level 3 — Proficient
-- Informative images have descriptive alt text
+- Informative images have descriptive alt text ending with a period
 - Decorative images have empty alt (alt="")
 - Alt text describes what matters, not just what's visible
 - Length is appropriate for image complexity
 
 ### Level 2 — Developing
-- Alt text present but may be too brief or too verbose
+- Alt text present but may be too brief, too verbose, or missing period
 - Some decorative images incorrectly labeled
 - May include "image of" prefixes
 - Complex images lack extended descriptions
@@ -59,39 +60,41 @@ Evaluation criteria for accessible content across four proficiency levels.
 - Alt text missing or uses filename
 - Decorative images have meaningless alt
 - Over-describes or under-describes consistently
-- No awareness of context-dependent descriptions
+- No awareness of context-dependent descriptions or period requirement
 
 ---
 
 ## Dimension 2: Interactive element labels
-*WCAG 2.4.4, 2.4.6, 2.4.9, 3.2.4, 4.1.2, COGA P3*
+*WCAG 2.4.4, 2.4.6, 2.4.9, 3.2.4, 4.1.2, COGA P3, style guide §11.4, §11.7*
 
 ### Level 4 — Expert
-- All buttons describe specific action + object ("Save draft", not "Save")
+- All buttons use title case with verb + noun pattern (style guide §4.1.1, §11.4.1)
+- Buttons use familiar, conventional verbs (COGA P3)
+- "Select" used instead of "click" throughout (style guide §7.1)
 - Links are meaningful out of context; tested in screen reader links list (WCAG 2.4.9)
 - Download links disclose file type, size, and/or new-window behavior (WCAG 2.4.4)
 - Form labels are visible, associated, and unambiguous
+- Optional fields explicitly marked "(optional)" (WCAG 3.3.2, style guide §11.7.4)
 - No duplicate labels where differentiation matters
 - Icon-only controls have a descriptive accessible name (WCAG 4.1.2)
 - Identical controls use consistent labels across all pages and views (WCAG 3.2.4)
-- Button labels use familiar, conventional verbs (COGA P3)
 
 ### Level 3 — Proficient
-- Buttons have action verbs + objects
-- Links avoid "click here" and "learn more" patterns
+- Buttons have action verbs + objects in title case
+- Links avoid "click here" and "learn more" patterns; use "select" not "click"
 - Form fields have visible labels (not placeholder-only)
 - Error messages are associated with their fields
 - Navigation labels are consistent across responsive breakpoints (WCAG 3.2.3)
 
 ### Level 2 — Developing
 - Some generic labels ("Submit", "Continue") without context
+- "click" used instead of "select"
 - Links sometimes rely on surrounding text for meaning
 - Labels present but occasionally ambiguous
-- Aria-label overused as a crutch for poor visible text
 - Navigation labels differ between mobile and desktop views
 
 ### Level 1 — Novice
-- Generic labels throughout ("Click here", "Submit")
+- Generic labels throughout ("Select here", "Submit")
 - Links meaningless out of context
 - Placeholder text used as primary label
 - No awareness of label + action relationship
@@ -99,9 +102,10 @@ Evaluation criteria for accessible content across four proficiency levels.
 ---
 
 ## Dimension 3: Content structure
-*WCAG 2.4.1, 2.4.2, 2.4.6, 2.4.8, 2.4.10*
+*WCAG 2.4.1, 2.4.2, 2.4.6, 2.4.8, 2.4.10, style guide §11.9*
 
 ### Level 4 — Expert
+- H1 uses title case; H2–H4 use sentence case (style guide §4.1.1, §4.1.2)
 - Heading hierarchy is logical and complete (h1 → h2 → h3)
 - Single h1 per page describes page purpose
 - Headings alone tell the page story (navigable by heading)
@@ -117,37 +121,39 @@ Evaluation criteria for accessible content across four proficiency levels.
 - No skipped heading levels
 - Headings are descriptive (not "Section 1")
 - Major content sections have headings
-- One h1 per page
+- One h1 per page in title case
 - Page titles distinguish pages from one another
 - Skip link exists even if not always visible
 
 ### Level 2 — Developing
 - Heading levels occasionally skipped
 - Some headings used for styling, not structure
-- h1 may be missing or duplicated
-- Structure exists but is inconsistent
+- Inconsistent capitalization on headings
 - Page titles generic or not updated in SPAs
 
 ### Level 1 — Novice
 - Headings used for visual styling only
-- No logical hierarchy
-- Missing h1 or structural landmarks
+- No logical hierarchy; missing h1
 - Content structure invisible to assistive tech
 - No skip links; no page titles
 
 ---
 
 ## Dimension 4: Language clarity
-*WCAG 3.1.3, 3.1.4, 3.1.5, 3.1.6, COGA P1, P2, P4, P5, P9, P10*
+*WCAG 3.1.3, 3.1.4, 3.1.5, 3.1.6, COGA P1, P2, P4, P5, P9, P10, style guide §1, §2, §7*
 
 ### Level 4 — Expert
 - Reading level does not exceed Grade 9 (WCAG 3.1.5); aim for Grade 8 or below
-- Sentences do not exceed 25 words (WCAG 3.1.5, COGA P1)
-- Action or outcome stated first in instructions (COGA P2)
+- Sentences do not exceed 25 words (WCAG 3.1.5, COGA P1, style guide §2.2)
+- Action or outcome stated first in instructions (COGA P2, style guide §1.6)
 - Multi-step instructions chunked into numbered lists or bullets (COGA P4)
 - Repeated information shown inline rather than referencing earlier content (COGA P5)
 - Icons always paired with visible text labels (COGA P9)
 - No all-caps, color-only emphasis, or fixed font-size reliance (COGA P10)
+- No exclamation points (style guide §1.7.5)
+- No filler words ("quickly", "simply") (style guide §1.7.1)
+- No pleasantries ("please", "sorry") unless softening high-friction copy (style guide §1.7.2)
+- "Select" used instead of "click"; "turn on/off" instead of "enable/disable" (style guide §7.1)
 - Uncommon terms defined at first appearance (WCAG 3.1.3)
 - Abbreviations expanded on first use with programmatic support (WCAG 3.1.4)
 - Words requiring specific pronunciation provide a cue (WCAG 3.1.6)
@@ -156,15 +162,14 @@ Evaluation criteria for accessible content across four proficiency levels.
 ### Level 3 — Proficient
 - Plain language used for most content
 - Jargon avoided or explained
-- Instructions are task-focused, not location-focused
+- Instructions are task-focused and front-loaded
 - Abbreviations expanded on first use
-- Sentence structure is clear and direct
 - Steps broken into lists where appropriate
+- Preferred word choices followed (style guide §7.1)
 
 ### Level 2 — Developing
 - Some unnecessary complexity or jargon without explanation
-- Directional instructions used occasionally ("click the button on the right")
-- Inconsistent terminology
+- "click" used instead of "select"
 - Instructions sometimes buried after the action
 - Multi-step instructions written as prose
 
@@ -172,22 +177,24 @@ Evaluation criteria for accessible content across four proficiency levels.
 - Dense, complex language throughout
 - Heavy jargon without explanation
 - Relies on visual/spatial references
-- Assumes knowledge user may not have
 - Long, unbroken instruction paragraphs
+- Exclamation points present
 
 ---
 
 ## Dimension 5: Assistive technology support
-*WCAG 1.3.3, 1.4.1, 2.2.1, 2.2.3, 2.2.4, 3.2.1, 3.2.2, 3.2.5, 4.1.2, 4.1.3*
+*WCAG 1.3.3, 1.4.1, 2.2.1, 2.2.3, 2.2.4, 3.2.1, 3.2.2, 3.2.5, 4.1.2, 4.1.3, style guide §10*
 
 ### Level 4 — Expert
-- Status changes announced appropriately with specific, descriptive messages (WCAG 4.1.3)
+- Status changes announced with specific, descriptive messages (WCAG 4.1.3)
 - Status messages reference the affected element (WCAG 4.1.3)
-- Dynamic content updates communicated to screen readers via aria-live
-- Focus management is intentional: modals trap focus; focus restores on close (WCAG 2.2.4)
+- Toast success pattern: `{action} + {object}` (style guide §11.13.2)
+- Toast failure pattern: `Failed to {action} {object}` (style guide §11.13.3)
+- Dynamic content updates communicated to screen readers via aria-live (style guide §10.4)
+- Focus managed on modals: traps focus on open, restores on close (WCAG 2.2.4, style guide §11.11.7)
 - No information conveyed by color alone; supplemented with text or icon (WCAG 1.4.1)
-- Instructions do not rely on sensory characteristics (shape, color, position) (WCAG 1.3.3)
-- Non-emergency interruptions (modals, banners) can be dismissed or postponed (WCAG 2.2.4)
+- Instructions do not rely on sensory characteristics (WCAG 1.3.3)
+- Non-emergency interruptions can be dismissed or postponed (WCAG 2.2.4)
 - Time-limited tasks provide visible, announced timer and option to extend (WCAG 2.2.1)
 - Keyboard focus does not trigger context changes (WCAG 3.2.1)
 - User input does not unexpectedly change context (WCAG 3.2.2)
@@ -196,6 +203,7 @@ Evaluation criteria for accessible content across four proficiency levels.
 
 ### Level 3 — Proficient
 - Important status changes have polite or assertive announcements
+- Toast patterns followed for success and failure
 - Form errors are announced and associated with their fields
 - Color is supplemented with text or icons
 - Focus order is logical
@@ -204,10 +212,10 @@ Evaluation criteria for accessible content across four proficiency levels.
 
 ### Level 2 — Developing
 - Some status changes not announced
+- Toast patterns inconsistent
 - Errors may not be programmatically associated
 - Color sometimes only differentiator
 - Focus not always managed on modal open/close
-- Limited testing with assistive tech
 
 ### Level 1 — Novice
 - No consideration for screen reader announcements
@@ -219,13 +227,14 @@ Evaluation criteria for accessible content across four proficiency levels.
 ---
 
 ## Dimension 6: Cognitive accessibility
-*COGA P6, P7, P8, WCAG 3.3.4, 3.3.6, 3.3.7, 3.3.8, 3.3.9*
+*COGA P6, P7, P8, WCAG 3.3.4, 3.3.6, 3.3.7, 3.3.8, 3.3.9, style guide §12*
 
 ### Level 4 — Expert
-- Error messages state what happened and give a clear fix (COGA P6)
-- Tone is neutral and task-focused; no blaming language (COGA P7)
+- Error messages state what happened and give a clear fix (COGA P6, style guide §12.1)
+- Tone is neutral and task-focused; no blaming language (COGA P7, style guide §12.1)
 - Blocking steps include a direct help link or phone number (COGA P8)
 - Destructive or critical actions require confirmation before committing (WCAG 3.3.4, 3.3.6)
+- Confirmation modal uses action + question mark title format (style guide §11.11.2)
 - Undo or cancel option available for high-impact changes (WCAG 3.3.6)
 - Repeated information pre-filled or offered via reuse mechanism (WCAG 3.3.7)
 - Authentication can be completed without memory or transcription tasks (WCAG 3.3.8, 3.3.9)
@@ -254,10 +263,11 @@ Evaluation criteria for accessible content across four proficiency levels.
 ---
 
 ## Dimension 7: Error handling and recovery
-*WCAG 3.3.1, 3.3.2, 3.3.5, COGA P6, P7, P8*
+*WCAG 3.3.1, 3.3.2, 3.3.5, COGA P6, P7, P8, style guide §12.2, §12.3*
 
 ### Level 4 — Expert
-- All errors include a visible message explaining the issue and the fix (WCAG 3.3.1)
+- All validation errors visible, associated with input, and have no trailing period (WCAG 3.3.1, style guide §4.4.2)
+- System errors end with a period (style guide §4.4.1)
 - Error text is programmatically associated with its input (WCAG 3.3.1)
 - Format requirements and help text appear before submission (WCAG 3.3.2)
 - Optional fields are explicitly marked "(optional)" (WCAG 3.3.2)
@@ -265,25 +275,27 @@ Evaluation criteria for accessible content across four proficiency levels.
 - Help triggers use consistent labels across all pages (WCAG 3.3.5)
 - Success messages include a reversal path where appropriate (WCAG 3.3.6)
 - Errors use neutral language and focus on the fix (COGA P6, P7)
+- Validation errors follow approved patterns (style guide §12.2.2)
+- System errors follow problem + recovery structure (style guide §12.3.4)
 
 ### Level 3 — Proficient
 - Errors visible and associated with fields
+- Validation errors have no trailing period; system errors end with a period
 - Format guidance present before submission
 - Optional fields marked
-- Help available on complex inputs
 - Errors explain what went wrong
 
 ### Level 2 — Developing
 - Some errors missing association to fields
+- Period rules inconsistently applied
 - Format guidance may appear only after error
 - Optional/required indication inconsistent
-- Help hard to find or not keyboard accessible
 
 ### Level 1 — Novice
 - Errors missing or generic
 - No association with input fields
+- Period rules ignored
 - No format guidance
-- No help on complex inputs
 
 ---
 
@@ -339,14 +351,17 @@ Any of these result in automatic failure regardless of other scores:
 | Criterion | Standard |
 |-----------|----------|
 | Missing alt text on informative images | WCAG 1.1.1 |
+| Alt text missing trailing period | Style guide §6.1.4 |
 | No visible form labels | WCAG 1.3.1, 3.3.2 |
-| "Click here" as sole link text | WCAG 2.4.4 |
+| "Select here" or "Learn more" as sole link text | WCAG 2.4.4 |
 | Information conveyed by color alone | WCAG 1.4.1 |
 | No programmatic heading structure | WCAG 1.3.1 |
 | Errors with no explanation or fix | WCAG 3.3.1, COGA P6 |
+| Period on validation errors | Style guide §4.4.2 |
 | Paste blocked on password or code fields | WCAG 3.3.8 |
 | Destructive action with no confirmation | WCAG 3.3.6 |
 | Non-emergency modal cannot be dismissed | WCAG 2.2.4 |
+| Exclamation points in UI copy | Style guide §1.7.5 |
 
 ---
 
