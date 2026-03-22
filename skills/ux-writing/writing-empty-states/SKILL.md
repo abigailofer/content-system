@@ -1,9 +1,9 @@
+# Writing Empty States
+
 ---
 name: writing-empty-states
 description: Write helpful, actionable empty state messages for UI. Use when displaying screens with no data, first-run experiences, zero results, or cleared content states.
 ---
-
-# Writing Empty States
 
 ## Quick start
 Collect or infer:
@@ -14,25 +14,57 @@ Collect or infer:
 
 Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md](RUBRIC.md).
 
+---
+
 ## Workflow
 1. Identify empty state type using [reference/empty-state-types.md](reference/empty-state-types.md)
 2. Determine what the user expects to see
-3. Write the headline (acknowledge the state)
-4. Write supporting text (explain or guide)
-5. Provide primary action (if applicable)
+3. Write the headline (acknowledge the state) — sentence case, no period
+4. Write supporting text (explain or guide) — sentence case, ends with period unless ending with a link
+5. Provide primary action if applicable — title case, no period
 6. Run the rubric check. Revise until it passes.
+
+---
 
 ## Degrees of freedom
 - **Low**: Structure (headline + support + action) is fixed
 - **Medium**: Tone can be warmer for first-run, neutral for no-results
 - **Allowed variation**: Support text optional if action is self-explanatory
 
+---
+
 ## Constraints
-- Headline: max 50 characters
-- Support text: max 120 characters
-- Action label: max 25 characters
-- Never leave users without guidance
-- First-run states should motivate, not just describe absence
+
+| Element | Case | Period | Max length | Other |
+|---------|------|--------|------------|-------|
+| Headline (usually H2) | Sentence case | No | 50 chars | Required in all empty states; heading level depends on page structure |
+| Support text | Sentence case | Yes — unless ending with a link | 120 chars | Optional if action is self-explanatory |
+| Action label | Title case | No | 25 chars | Omit if user cannot take action |
+
+### Approved single-word action label exceptions
+The following single-word labels are approved without a noun:
+- Save
+- Done
+- Apply
+- Delete
+- Remove
+- Archive
+- Discard
+- Edit
+- Retry
+
+### Action label rules by empty state type
+- **First-run**: include primary CTA to create or get started
+- **No-results**: offer "Clear Filters" or "View All [Items]" to reset
+- **User-cleared**: include CTA if user can populate; omit if they cannot
+- **Error-caused**: include recovery CTA ("Refresh Page" or "Back to Home")
+- **No action possible**: omit action entirely; use support text to set expectation
+
+### Word choice
+- Use "select" not "click" in support text (style guide §7.1)
+- Use "turn on / turn off" not "enable / disable" (style guide §7.1)
+
+---
 
 ## References
 - Templates: [TEMPLATES.md](TEMPLATES.md)
