@@ -53,9 +53,12 @@ Follow these approved patterns (style guide §11.7.5):
 | Select/dropdown | `Select {property}` | `Select country` |
 | Search | `Search {item}` | `Search campaigns` |
 
-### Combobox/dropdown rules
-- Label: singular, lowercase (style guide §11.6.1)
-- Placeholder: `Select {property}` — no article (style guide §11.6.2)
+### Label rules
+- Labels are nouns or noun phrases — never instructions or verbs
+- Good: "Country", "Email address", "Full name"
+- Bad: "Select country", "Enter your email", "Type your name"
+- Singular and lowercase (sentence case)
+- No trailing period
 
 ### Required/optional indicators
 - Required fields are marked with a red asterisk (*)
