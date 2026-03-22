@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Form Labels and Help Text
+
+---
 
 ## Example 1: Simple text field
+
 **Input:**
 - Purpose: Collect user's full name
 - Required: Yes
@@ -22,6 +25,7 @@ form_field:
 ---
 
 ## Example 2: Email with validation
+
 **Input:**
 - Purpose: Account email address
 - Required: Yes
@@ -33,7 +37,7 @@ form_field:
   label: "Email address"
   required: true
   input_type: "email"
-  placeholder: "you@example.com"
+  placeholder: "name@example.com"
   help_text: null
   validation:
     - rule: "required"
@@ -45,6 +49,7 @@ form_field:
 ---
 
 ## Example 3: Password with requirements
+
 **Input:**
 - Purpose: Set account password
 - Required: Yes
@@ -57,19 +62,20 @@ form_field:
   required: true
   input_type: "password"
   placeholder: null
-  help_text: "At least 8 characters with one number"
+  help_text: "At least 8 characters with one number."
   validation:
     - rule: "required"
       error: "Enter a password"
     - rule: "min_length_8"
-      error: "Use at least 8 characters"
+      error: "Password must be at least 8 characters"
     - rule: "has_number"
-      error: "Include at least one number"
+      error: "Password must include at least one number"
 ```
 
 ---
 
 ## Example 4: Optional phone number
+
 **Input:**
 - Purpose: Phone for account recovery
 - Required: No
@@ -82,14 +88,14 @@ form_field:
   required: false
   input_type: "tel"
   placeholder: "(555) 555-5555"
-  help_text: "For account recovery only"
-  optional_indicator: "(optional)"
+  help_text: "We'll only use this for account recovery."
   validation: null
 ```
 
 ---
 
 ## Example 5: Dropdown select
+
 **Input:**
 - Purpose: Select user's country
 - Required: Yes
@@ -101,7 +107,7 @@ form_field:
   label: "Country"
   required: true
   input_type: "select"
-  placeholder: "Select a country"
+  placeholder: "Select country"
   help_text: null
   options: ["United States", "Canada", "United Kingdom", "..."]
   validation:
@@ -112,6 +118,7 @@ form_field:
 ---
 
 ## Edge case: Credit card number
+
 **Input:**
 - Purpose: Payment card number
 - Required: Yes
@@ -136,6 +143,7 @@ form_field:
 ---
 
 ## Edge case: Textarea with character limit
+
 **Input:**
 - Purpose: Bio or description
 - Required: No
@@ -147,12 +155,34 @@ form_field:
   label: "Bio"
   required: false
   input_type: "textarea"
-  placeholder: "Tell us about yourself"
-  help_text: "Max 280 characters"
-  optional_indicator: "(optional)"
+  placeholder: "Describe yourself"
+  help_text: "Max 280 characters."
   max_length: 280
   show_character_count: true
   validation:
     - rule: "max_length_280"
-      error: "Bio must be 280 characters or fewer"
+      error: "Bio can't be longer than 280 characters"
 ```
+
+---
+
+## Example 6: Placeholder patterns reference
+
+Approved placeholder patterns by field type (style guide §11.7.5):
+
+| Field type | Pattern | Example |
+|-----------|---------|---------|
+| Text field | `Enter {name}` | `Enter project name` |
+| Text field | `Enter {name}` | `Enter email address` |
+| Description/textarea | `Describe the {collection}` | `Describe the test scenario` |
+| Email | Example format | `name@example.com` |
+| Select/dropdown | `Select {property}` | `Select country` |
+| Select/dropdown | `Select {property}` | `Select severity` |
+| Search | `Search {item}` | `Search campaigns` |
+| Search | `Search {item}` | `Search issues` |
+
+**Rules:**
+- Never use an article in the pattern ("Select a country" ❌ → "Select country" ✅)
+- Never repeat the label as the placeholder ("Email" on an Email field ❌)
+- Never use fake data that looks real ("John Smith" ❌ → "Enter full name" ✅)
+- Never use a placeholder as a substitute for a label
