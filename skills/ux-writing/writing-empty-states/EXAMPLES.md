@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Empty States
+
+---
 
 ## Example 1: First-run state
+
 **Input:**
 - Empty state type: first-run
 - Feature: Projects
@@ -14,13 +17,14 @@ empty_state:
   headline: "Create your first project"
   support: "Projects help you organize your work and collaborate with your team."
   action:
-    label: "New project"
+    label: "New Project"
     type: "create"
 ```
 
 ---
 
 ## Example 2: No results (search)
+
 **Input:**
 - Empty state type: no-results
 - Context: User searched for "quarterly report" in documents
@@ -34,13 +38,14 @@ empty_state:
   headline: "No results for \"quarterly report\""
   support: "Try different keywords or remove the PDF filter."
   action:
-    label: "Clear filters"
+    label: "Clear Filters"
     type: "search"
 ```
 
 ---
 
 ## Example 3: User-cleared state
+
 **Input:**
 - Empty state type: user-cleared
 - Feature: Notifications
@@ -61,6 +66,7 @@ empty_state:
 ---
 
 ## Example 4: Error-caused empty state
+
 **Input:**
 - Empty state type: error-caused
 - Feature: Activity feed
@@ -74,18 +80,19 @@ empty_state:
   headline: "Couldn't load activity"
   support: "Check your connection and try again."
   action:
-    label: "Retry"
+    label: "Refresh Page"
     type: "navigate"
 ```
 
 ---
 
 ## Edge case: Empty state with no possible action
+
 **Input:**
 - Empty state type: user-cleared
 - Feature: Shared with me (files others share with you)
 - Context: No one has shared files with this user
-- Primary action: None—user cannot create content here
+- Primary action: None — user cannot create content here
 
 **Output:**
 ```yaml
@@ -97,11 +104,13 @@ empty_state:
     label: null
     type: null
 ```
+
 Note: When user cannot take action, omit action button. Support text sets expectation.
 
 ---
 
 ## Edge case: No results with query suggestions
+
 **Input:**
 - Empty state type: no-results
 - Context: User searched for "acounting" (typo)
@@ -114,6 +123,29 @@ empty_state:
   headline: "No results for \"acounting\""
   support: "Did you mean \"accounting\"?"
   action:
-    label: "Search \"accounting\""
+    label: "Search \"Accounting\""
     type: "search"
 ```
+
+---
+
+## Example 6: No results with view all option
+
+**Input:**
+- Empty state type: no-results
+- Context: User filtered reports by "Q4" with date range applied, no matches
+- Filters active: Date range + keyword
+- View all available: Yes
+
+**Output:**
+```yaml
+empty_state:
+  type: "no-results"
+  headline: "No results for \"Q4\""
+  support: "Try adjusting the date range or removing filters."
+  action:
+    label: "View All Reports"
+    type: "navigate"
+```
+
+Note: "View All [Items]" is preferred over "Clear Filters" when resetting to the full list is more useful than incrementally removing filters.
