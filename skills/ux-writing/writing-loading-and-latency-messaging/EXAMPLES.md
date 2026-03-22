@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Loading and Latency Messaging
+
+---
 
 ## Example 1: Page load (medium)
+
 **Input:**
 - Loading type: initial page load
 - Expected duration: 2-5 seconds
@@ -22,6 +25,7 @@ loading_state:
 ---
 
 ## Example 2: Action response (short)
+
 **Input:**
 - Loading type: button action
 - Expected duration: 500ms-1s
@@ -37,12 +41,13 @@ loading_state:
   interruptible: false
   timeout:
     duration_seconds: 10
-    fallback: "Couldn't save. Please try again."
+    fallback: "We couldn't save your changes. Try again."
 ```
 
 ---
 
 ## Example 3: File upload (long, determinate)
+
 **Input:**
 - Loading type: file upload
 - Expected duration: 30 seconds
@@ -53,11 +58,11 @@ loading_state:
 loading_state:
   tier: "long"
   message: "Uploading..."
-  detail: "23 MB of 50 MB"
+  detail: "23 MB of 50 MB."
   indicator: "progress-bar"
   progress_percent: 46
   interruptible: true
-  cancel_label: "Cancel"
+  cancel_label: "Cancel Upload"
   timeout:
     duration_seconds: 120
     fallback: "Upload timed out. Check your connection and try again."
@@ -66,6 +71,7 @@ loading_state:
 ---
 
 ## Example 4: Report generation (very long)
+
 **Input:**
 - Loading type: background processing
 - Expected duration: 2-5 minutes
@@ -83,12 +89,17 @@ loading_state:
   notification_on_complete: true
   timeout:
     duration_seconds: 600
-    fallback: "Report generation timed out. Please try again or contact support."
+    fallback: "Report generation timed out. Try again or contact support."
+  completion_toast:
+    text: "Report generated."
+    aria_live: "polite"
+    # Toast pattern: {Action} + {object} — style guide §11.13.2
 ```
 
 ---
 
 ## Example 5: Search (instant to short)
+
 **Input:**
 - Loading type: search results
 - Expected duration: 100-500ms
@@ -104,12 +115,13 @@ loading_state:
   debounce_ms: 300
   timeout:
     duration_seconds: 5
-    fallback: "Search failed. Try again."
+    fallback: "Couldn't load search results. Try again."
 ```
 
 ---
 
 ## Edge case: Unknown duration
+
 **Input:**
 - Loading type: third-party API call
 - Expected duration: Unknown (depends on external service)
@@ -123,7 +135,7 @@ loading_state:
   detail: "This may take a few moments depending on your data size."
   indicator: "spinner"
   interruptible: true
-  cancel_label: "Cancel import"
+  cancel_label: "Cancel Import"
   timeout:
     duration_seconds: 180
     fallback: "Import is taking longer than expected. Check back later or try again."
@@ -132,6 +144,7 @@ loading_state:
 ---
 
 ## Edge case: Background refresh (invisible)
+
 **Input:**
 - Loading type: background data refresh
 - Expected duration: 1-2 seconds
@@ -147,4 +160,5 @@ loading_state:
   update_on_complete: true
   silent_failure: true
 ```
+
 Note: Background refreshes should be invisible unless they fail persistently.
