@@ -3,7 +3,7 @@
 ---
 
 ## Pass if all are true
-- [ ] Headline clearly states what will happen (not "Are you sure?")
+- [ ] Modal title matches or closely reflects the CTA that launched it
 - [ ] Headline is ≤60 characters
 - [ ] Headline uses sentence case
 - [ ] Headline has no trailing period
@@ -25,7 +25,7 @@
 ---
 
 ## Fail if any are true
-- [ ] Headline is vague ("Are you sure?", "Confirm action")
+- [ ] Modal title contradicts or uses different action words than the CTA that launched it
 - [ ] Headline uses title case or has a trailing period
 - [ ] Confirm button doesn't match the action ("OK" for delete)
 - [ ] Confirm button uses sentence case or has a trailing period
