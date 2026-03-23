@@ -49,7 +49,10 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 - Never request unnecessary permissions
 - Use "Not Now" instead of "Don't Allow" for softer decline
 
-### Sensitive permissions
+### Support contact copy
+- Button: "Contact Support" (title case, no brand name)
+- Inline text: "Contact Evinced Support"
+- Never: "Contact us", "Get help", "Support"
 - Use a pre-request prompt before triggering the system dialog
 - Link to privacy policy for data-sensitive permissions
 - For re-authentication flows, allow paste and autofill on password fields (WCAG 3.3.8)
