@@ -402,3 +402,8 @@ modal:
 - [Writing error messages](../writing-error-messages/SKILL.md)
 - [Writing form labels and help text](../writing-form-labels-and-helptext/SKILL.md)
 - [Reducing cognitive load](../../content-design/reducing-cognitive-load/SKILL.md)
+
+## Reference
+- [Glossary](../../reference/glossary.md)
+- [Words to use](../../reference/words-to-use.md)
+- [Words to avoid](../../reference/words-to-avoid.md)
