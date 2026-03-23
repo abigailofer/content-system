@@ -17,7 +17,8 @@
 - [ ] Message does not expose internal errors, codes, or stack traces
 - [ ] Message does not use the word "failure"
 - [ ] Tone is neutral, direct, and action-oriented — no humor, drama, or over-apologizing
-- [ ] Message tells user how to recover or what to do next
+- [ ] Support button label is "Contact Support"
+- [ ] Support inline text is "Contact Evinced Support"
 - [ ] Error type is correctly classified per reference/error-categories.md
 
 ---
@@ -35,7 +36,8 @@
 - [ ] Action label is vague when specific action exists ("OK" instead of "Try Again")
 - [ ] Character limits exceeded
 - [ ] Message creates anxiety disproportionate to severity
-- [ ] Tone uses humor, drama, or over-apologizing
+- [ ] Support button uses a label other than "Contact Support"
+- [ ] Support inline text uses a label other than "Contact Evinced Support"
 - [ ] Error code or exception text visible to user
 
 ---
