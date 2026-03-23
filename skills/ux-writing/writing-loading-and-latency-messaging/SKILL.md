@@ -42,7 +42,10 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 | Cancel label | Title case | No | 25 chars | Required for interruptible operations |
 | Fallback error message | Sentence case | Yes | 150 chars | Always required; follow system error pattern |
 
-### Tone rules for fallback messages
+### Support contact copy
+- Button: "Contact Support" (title case, no brand name)
+- Inline text: "Contact Evinced Support"
+- Never: "Contact us", "Get help", "Support"
 - Follow the system error pattern: problem statement + recovery action
 - Use "We couldn't" not "Couldn't" for system-caused failures
 - Never use "failure" or "failed"
