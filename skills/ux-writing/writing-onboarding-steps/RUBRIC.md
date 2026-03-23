@@ -4,6 +4,7 @@
 
 ## Pass if all are true
 - [ ] If a CTA launches a modal, the modal title matches or closely reflects the CTA label
+- [ ] H1 (if present) is unique across pages — flag if it matches a known page title and confirm with user if unsure
 - [ ] Step headlines are ≤50 characters
 - [ ] Step headlines use sentence case
 - [ ] Step headlines have no trailing period
