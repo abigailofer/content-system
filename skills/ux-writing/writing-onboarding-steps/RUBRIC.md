@@ -3,7 +3,7 @@
 ---
 
 ## Pass if all are true
-- [ ] Each step focuses on exactly one action or concept
+- [ ] If a CTA launches a modal, the modal title matches or closely reflects the CTA label
 - [ ] Step headlines are ≤50 characters
 - [ ] Step headlines use sentence case
 - [ ] Step headlines have no trailing period
@@ -27,7 +27,7 @@
 ---
 
 ## Fail if any are true
-- [ ] Step tries to teach multiple concepts at once
+- [ ] Modal title contradicts or uses different action words than the CTA that launched it
 - [ ] Character limits exceeded
 - [ ] Headline uses title case or has a trailing period
 - [ ] Headline contains an exclamation point
