@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Settings and Preferences
+
+---
 
 ## Example 1: Notification toggle
+
 **Input:**
 - Category: Notifications
 - Setting: Control email notifications for project updates
@@ -19,6 +22,7 @@ setting:
 ---
 
 ## Example 2: Theme selector
+
 **Input:**
 - Category: Appearance
 - Setting: App color theme
@@ -39,6 +43,7 @@ setting:
 ---
 
 ## Example 3: Privacy toggle
+
 **Input:**
 - Category: Privacy
 - Setting: Profile visibility to non-team members
@@ -57,6 +62,7 @@ setting:
 ---
 
 ## Example 4: Input setting
+
 **Input:**
 - Category: Account
 - Setting: Display name shown to other users
@@ -76,6 +82,7 @@ setting:
 ---
 
 ## Example 5: Destructive action
+
 **Input:**
 - Category: Account
 - Setting: Delete account permanently
@@ -86,9 +93,9 @@ setting:
 setting:
   category: "account"
   label: "Delete account"
-  description: "Permanently delete your account and all your data. This can't be undone."
+  description: "Permanently delete your account and all your data. You cannot undo this action."
   type: "action"
-  action_label: "Delete account"
+  action_label: "Delete Account"
   style: "destructive"
   requires_confirmation: true
 ```
@@ -96,6 +103,7 @@ setting:
 ---
 
 ## Edge case: Double negative to avoid
+
 **Input (bad):**
 - Label: "Disable email notifications"
 - Type: Toggle
@@ -113,11 +121,13 @@ setting:
   type: "toggle"
   default: true
 ```
+
 Rule: Toggle labels describe the ON state. "Email notifications" ON = you get emails.
 
 ---
 
-## Edge case: Complex setting with learn more
+## Edge case: Complex setting with documentation link
+
 **Input:**
 - Category: Advanced
 - Setting: API rate limiting
@@ -128,9 +138,11 @@ Rule: Toggle labels describe the ON state. "Email notifications" ON = you get em
 setting:
   category: "advanced"
   label: "API rate limit"
-  description: "Maximum API requests per minute. Learn more"
+  description: "Maximum API requests per minute."
   type: "input"
   default: "1000"
-  helper_text: "Enter a number between 100 and 10000"
-  learn_more_url: "/docs/api-rate-limits"
+  helper_text: "Enter a number between 100 and 10,000."
+  learn_more:
+    text: "Learn about API rate limits"
+    url: "/docs/api-rate-limits"
 ```
