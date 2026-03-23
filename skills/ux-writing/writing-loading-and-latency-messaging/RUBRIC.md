@@ -18,7 +18,8 @@
 - [ ] Message appears for medium+ waits (>2s)
 - [ ] Time estimate provided for very long waits (>60s)
 - [ ] Interruptible operations can be cancelled
-- [ ] Timeout exists with error fallback
+- [ ] Support button label is "Contact Support"
+- [ ] Support inline text is "Contact Evinced Support"
 
 ---
 
