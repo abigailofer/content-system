@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Onboarding Steps
+
+---
 
 ## Example 1: Setup wizard
+
 **Input:**
 - Onboarding type: setup-wizard
 - Product: Project management tool
@@ -17,7 +20,7 @@ onboarding_flow:
       headline: "Welcome to TaskFlow"
       body: "Let's set up your workspace. This takes about 2 minutes."
       action:
-        label: "Get started"
+        label: "Get Started"
         type: "next"
     - step: 2
       headline: "Name your workspace"
@@ -32,16 +35,17 @@ onboarding_flow:
         label: "Continue"
         type: "next"
     - step: 4
-      headline: "You're all set!"
-      body: "Your workspace is ready. Create your first project to get started."
+      headline: "Your workspace is ready"
+      body: "Create your first project to get started."
       action:
-        label: "Create project"
+        label: "Create Project"
         type: "complete"
 ```
 
 ---
 
 ## Example 2: Feature tour
+
 **Input:**
 - Onboarding type: feature-tour
 - Feature: New dashboard redesign
@@ -56,9 +60,9 @@ onboarding_flow:
   steps:
     - step: 1
       headline: "Welcome to your new dashboard"
-      body: "We've redesigned the dashboard to help you find things faster."
+      body: "The dashboard has been redesigned to help you find things faster."
       action:
-        label: "Take a tour"
+        label: "Take a Tour"
         type: "next"
     - step: 2
       headline: "Quick access to recent projects"
@@ -77,6 +81,7 @@ onboarding_flow:
 ---
 
 ## Example 3: Contextual tip
+
 **Input:**
 - Onboarding type: contextual-tip
 - Context: User just created their first project
@@ -92,13 +97,14 @@ onboarding_flow:
       headline: "Tip: Start with a template"
       body: "Save time by starting from one of our pre-built project templates."
       action:
-        label: "Browse templates"
+        label: "Browse Templates"
         type: "action"
 ```
 
 ---
 
 ## Edge case: Long required setup
+
 **Input:**
 - Onboarding type: setup-wizard
 - Product: Enterprise security tool
@@ -115,7 +121,7 @@ onboarding_flow:
       headline: "Set up SecureGuard"
       body: "Complete these 6 steps to configure your security policies. About 10 minutes."
       action:
-        label: "Begin setup"
+        label: "Begin Setup"
         type: "next"
     - step: 2
       headline: "Connect your identity provider"
@@ -143,16 +149,18 @@ onboarding_flow:
         type: "next"
     - step: 6
       headline: "Setup complete"
-      body: "SecureGuard is now protecting your organization."
+      body: "SecureGuard is now configured and protecting your organization."
       action:
-        label: "Go to dashboard"
+        label: "Go to Dashboard"
         type: "complete"
 ```
+
 Note: For 6+ steps, provide time estimate upfront and consider allowing save & resume.
 
 ---
 
 ## Edge case: Optional tour with skip
+
 **Input:**
 - Onboarding type: feature-tour
 - Context: New user can skip but encouraged to learn
@@ -169,10 +177,61 @@ onboarding_flow:
       headline: "Quick tour of the basics"
       body: "Learn the key features in under a minute."
       action:
-        label: "Start tour"
+        label: "Start Tour"
         type: "next"
       secondary_action:
         label: "Skip"
         type: "complete"
 ```
+
 Note: Skip option respects user autonomy while making the tour inviting.
+
+---
+
+## Example 6: Questions vs statements
+
+Demonstrates when to use question framing vs statement framing in onboarding steps (style guide §13.8).
+
+### Question framing — use when gathering information
+```yaml
+onboarding_flow:
+  type: "setup-wizard"
+  total_steps: 3
+  steps:
+    - step: 1
+      headline: "How will you use TaskFlow?"
+      body: "We'll tailor your setup based on how your team works."
+      action:
+        label: "Continue"
+        type: "next"
+    - step: 2
+      headline: "What does your team work on?"
+      body: "Select the types of projects you manage most often."
+      action:
+        label: "Continue"
+        type: "next"
+```
+
+### Statement framing — use when giving clear instructions
+```yaml
+onboarding_flow:
+  type: "setup-wizard"
+  total_steps: 3
+  steps:
+    - step: 1
+      headline: "Choose how you'll use TaskFlow"
+      body: "Select the option that best describes how your team works."
+      action:
+        label: "Continue"
+        type: "next"
+    - step: 2
+      headline: "Select your project types"
+      body: "Choose the types of projects you manage most often."
+      action:
+        label: "Continue"
+        type: "next"
+```
+
+**When to use each:**
+- Questions feel more personal but can add friction — use when the user's answer meaningfully shapes the experience
+- Statements are more direct and seamless — use when the step is instructional rather than conversational
