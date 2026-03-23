@@ -16,7 +16,8 @@
 - [ ] Action label is ≤25 characters
 - [ ] Action label uses title case
 - [ ] Action label has no trailing period
-- [ ] Action is relevant to populating or resolving the empty state
+- [ ] Support button label is "Contact Support"
+- [ ] Support inline text is "Contact Evinced Support"
 - [ ] CTA rules followed by empty state type:
   - First-run: primary CTA present
   - No-results: "Clear Filters" or "View All [Items]" offered
