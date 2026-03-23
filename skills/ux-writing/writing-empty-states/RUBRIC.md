@@ -5,6 +5,7 @@
 ## Pass if all are true
 - [ ] Empty state type is correctly identified
 - [ ] Headline is present (required in all empty states)
+- [ ] If headline is H1, it is unique across pages — flag if it matches a known page title and confirm with user if unsure
 - [ ] Headline acknowledges the current state clearly
 - [ ] Headline is ≤50 characters
 - [ ] Headline uses sentence case
