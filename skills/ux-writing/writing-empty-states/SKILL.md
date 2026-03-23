@@ -53,7 +53,10 @@ The following single-word labels are approved without a noun:
 - Edit
 - Retry
 
-### Action label rules by empty state type
+### Support contact copy
+- Button: "Contact Support" (title case, no brand name)
+- Inline text: "Contact Evinced Support"
+- Never: "Contact us", "Get help", "Support"
 - **First-run**: include primary CTA to create or get started
 - **No-results**: offer "Clear Filters" or "View All [Items]" to reset
 - **User-cleared**: include CTA if user can populate; omit if they cannot
