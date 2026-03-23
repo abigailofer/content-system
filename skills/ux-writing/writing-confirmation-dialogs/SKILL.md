@@ -52,8 +52,13 @@ The following single-word labels are approved without a noun:
 - Archive
 - Discard
 - Edit
+- Retry
 
-### Approved cancel button labels
+### CTA and modal title correlation
+- The modal title must match or closely reflect the CTA that launched it
+- Small variation is allowed to add context, but the core action must be the same
+- Good: CTA "Add to Jira" → modal title "Add issue to Jira"
+- Bad: CTA "Add to Jira" → modal title "Create Jira issue"
 - Cancel
 - Quit *(when all progress will be lost)*
 - Stop *(when progress is saved but activity ends)*
