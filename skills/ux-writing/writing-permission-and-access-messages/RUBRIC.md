@@ -16,7 +16,8 @@
 - [ ] Deny label is ≤20 characters
 - [ ] Deny label uses title case and has no trailing period
 - [ ] Deny option is always available (no forced permissions)
-- [ ] Access denied state provides path to re-enable
+- [ ] Support button label is "Contact Support"
+- [ ] Support inline text is "Contact Evinced Support"
 - [ ] Permission requested is actually needed for the feature
 
 ---
