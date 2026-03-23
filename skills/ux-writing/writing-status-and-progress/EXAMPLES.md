@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Status and Progress
+
+---
 
 ## Example 1: File upload (determinate)
+
 **Input:**
 - Status type: task
 - Context: Uploading 10 files, 3 complete
@@ -21,6 +24,7 @@ status:
 ---
 
 ## Example 2: Processing (indeterminate)
+
 **Input:**
 - Status type: task
 - Context: Server processing a request, unknown duration
@@ -40,6 +44,7 @@ status:
 ---
 
 ## Example 3: Auto-save status
+
 **Input:**
 - Status type: sync
 - Context: Document auto-saved
@@ -55,11 +60,13 @@ status:
   progress:
     type: "none"
 ```
+
 Alternate with timestamp: `"Saved at 2:34 PM"`
 
 ---
 
 ## Example 4: Connection lost
+
 **Input:**
 - Status type: connection
 - Context: Network disconnected, offline mode active
@@ -79,6 +86,7 @@ status:
 ---
 
 ## Example 5: Export completed
+
 **Input:**
 - Status type: task
 - Context: Data export finished, download ready
@@ -98,6 +106,7 @@ status:
 ---
 
 ## Edge case: Pending state (queued)
+
 **Input:**
 - Status type: task
 - Context: Task queued behind others, not yet started
@@ -117,6 +126,7 @@ status:
 ---
 
 ## Edge case: Paused state
+
 **Input:**
 - Status type: task
 - Context: User paused a large download
@@ -139,6 +149,7 @@ status:
 ---
 
 ## Edge case: Long-running task
+
 **Input:**
 - Status type: task
 - Context: Database migration, expected 30+ minutes
@@ -154,4 +165,5 @@ status:
   progress:
     type: "indeterminate"
 ```
+
 Note: Set expectations and clarify user doesn't need to wait.
