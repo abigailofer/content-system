@@ -56,7 +56,10 @@ The following single-word labels are approved without a noun:
 - Retry
 - Dismiss
 
-### Tone rules
+### Support contact copy
+- Button: "Contact Support" (title case, no brand name)
+- Inline text: "Contact Evinced Support"
+- Never: "Contact us", "Get help", "Support"
 Must be:
 - Neutral
 - Direct
