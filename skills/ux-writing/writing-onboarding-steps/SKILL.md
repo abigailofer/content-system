@@ -54,7 +54,11 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 - Communicate feature value before the flow starts — inside the flow, focus on completing steps, not selling (style guide §13.10)
 - Never use exclamation points (style guide §1.7.5)
 
-### CTA label rules for flows (style guide §13.6)
+### CTA and modal title correlation
+- If a step CTA launches a modal, the modal title must match or closely reflect the CTA label
+- Small variation is allowed to add context, but the core action must be the same
+- Good: CTA "Add to Jira" → modal title "Add issue to Jira"
+- Bad: CTA "Add to Jira" → modal title "Create Jira issue"
 - CTAs must include a verb and a noun to make the outcome clear
 - Single-word CTAs like "Continue" or "Next" are acceptable only when surrounding step context makes the outcome unambiguous
 - Avoid single-word CTAs on the final step — use a specific label like "Create Project" or "Go to Dashboard"
