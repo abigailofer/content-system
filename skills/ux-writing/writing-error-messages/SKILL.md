@@ -38,6 +38,8 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 | Element | Case | Period | Max length | Other |
 |---------|------|--------|------------|-------|
 | Title (H2) | Sentence case | No | 60 chars | States what went wrong in user terms |
+# H1 uniqueness
+- If an error message appears on a full page with an H1, the H1 must be unique across all pages — flag if it matches a known page title and ask the user to confirm uniqueness if unsure
 | Body | Sentence case | Yes | 150 chars | Optional if cause and fix are obvious |
 | Action label | Title case | No | 25 chars | Omit if no recovery action exists |
 
