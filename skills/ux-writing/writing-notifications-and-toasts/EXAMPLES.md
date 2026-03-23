@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Notifications and Toasts
+
+---
 
 ## Example 1: Simple success
+
 **Input:**
 - Type: success
 - Context: User saved a document
@@ -19,6 +22,7 @@ notification:
 ---
 
 ## Example 2: Success with undo
+
 **Input:**
 - Type: success
 - Context: User deleted an email
@@ -39,6 +43,7 @@ notification:
 ---
 
 ## Example 3: Error notification
+
 **Input:**
 - Type: error
 - Context: Failed to send message due to network error
@@ -48,7 +53,7 @@ notification:
 ```yaml
 notification:
   type: "error"
-  message: "Couldn't send message. Check your connection."
+  message: "Failed to send message."
   action:
     label: "Retry"
     type: "retry"
@@ -58,6 +63,7 @@ notification:
 ---
 
 ## Example 4: Warning notification
+
 **Input:**
 - Type: warning
 - Context: User's storage is almost full
@@ -69,7 +75,7 @@ notification:
   type: "warning"
   message: "Storage almost full. 95% used."
   action:
-    label: "Manage storage"
+    label: "Manage Storage"
     type: "navigate"
   persistence: "manual-dismiss"
 ```
@@ -77,6 +83,7 @@ notification:
 ---
 
 ## Example 5: Info notification
+
 **Input:**
 - Type: info
 - Context: New feature announcement
@@ -87,9 +94,7 @@ notification:
 notification:
   type: "info"
   message: "New: Dark mode is now available"
-  action:
-    label: "Try it"
-    type: "navigate"
+  action: null
   persistence: "auto-dismiss"
   auto_dismiss_seconds: 8
 ```
@@ -97,9 +102,10 @@ notification:
 ---
 
 ## Edge case: Copy to clipboard
+
 **Input:**
 - Type: success
-- Context: User clicked "Copy link"
+- Context: User selected "Copy link"
 - Action required: None
 
 **Output:**
@@ -111,11 +117,13 @@ notification:
   persistence: "auto-dismiss"
   auto_dismiss_seconds: 3
 ```
+
 Note: Very brief confirmations can use 3-4 second dismiss.
 
 ---
 
 ## Edge case: Offline mode activated
+
 **Input:**
 - Type: info
 - Context: Network lost, switching to offline mode
@@ -129,11 +137,13 @@ notification:
   action: null
   persistence: "manual-dismiss"
 ```
+
 Note: Status changes that affect ongoing work should be manual-dismiss.
 
 ---
 
 ## Edge case: Bulk action
+
 **Input:**
 - Type: success
 - Context: User archived 12 conversations
