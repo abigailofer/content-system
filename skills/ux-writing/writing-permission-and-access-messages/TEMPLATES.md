@@ -1,27 +1,28 @@
-# Templates
+# Templates: Writing Permission and Access Messages
+
+---
 
 ## Default permission request structure
-
 ```md
-## [Headline - what access]
-[Explanation - why needed and benefit]
-
+## [Headline - what access, sentence case, no period]
+[Explanation - why needed and benefit, sentence case, ends with period.]
 [Deny action] | [Allow action]
 ```
 
 ## Structured output format
-
 ```yaml
 permission_message:
   type: "<system|data|role|feature>"
   state: "<requesting|denied|expired|insufficient>"
-  headline: "<what access - max 60 chars>"
-  explanation: "<why and benefit - max 150 chars>"
+  headline: "<what access - sentence case, no period, max 60 chars>"
+  explanation: "<why and benefit - sentence case, ends with period, max 150 chars>"
   allow:
-    label: "<grant action - max 20 chars>"
+    label: "<grant action - title case, no period, max 20 chars>"
   deny:
-    label: "<decline action - max 20 chars>"
+    label: "<decline action - title case, no period, max 20 chars>"
 ```
+
+---
 
 ## Variations by message state
 
@@ -35,7 +36,7 @@ permission_message:
   allow:
     label: "Allow"
   deny:
-    label: "Not now"
+    label: "Not Now"
 ```
 
 ### Permission denied (user previously declined)
@@ -46,7 +47,7 @@ permission_message:
   headline: "Location access needed"
   explanation: "To use this feature, allow location access in your device settings."
   allow:
-    label: "Open settings"
+    label: "Open Settings"
   deny:
     label: "Cancel"
 ```
@@ -59,7 +60,7 @@ permission_message:
   headline: "Admin access required"
   explanation: "Only workspace admins can change billing settings."
   allow:
-    label: "Request access"
+    label: "Request Access"
   deny:
     label: "Cancel"
 ```
@@ -72,10 +73,12 @@ permission_message:
   headline: "Upgrade to use this feature"
   explanation: "Advanced analytics is available on Pro and Enterprise plans."
   allow:
-    label: "View plans"
+    label: "View Plans"
   deny:
-    label: "Maybe later"
+    label: "Maybe Later"
 ```
+
+---
 
 ## Pre-request pattern (recommended for sensitive permissions)
 Show a custom prompt before triggering the system permission dialog:
@@ -86,10 +89,12 @@ pre_request:
   allow:
     label: "Continue"
   deny:
-    label: "Not now"
+    label: "Not Now"
 ```
 
+---
+
 ## Allowed variations
-- Use "Not now" instead of "Don't allow" for softer decline
+- Use "Not Now" instead of "Don't Allow" for softer decline
 - Include illustration showing feature that needs permission
 - Link to privacy policy for data-sensitive permissions
