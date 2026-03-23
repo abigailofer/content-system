@@ -70,3 +70,6 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 - Examples: [EXAMPLES.md](EXAMPLES.md)
 - Status states: [reference/status-states.md](reference/status-states.md)
 - Notifications: [../writing-notifications-and-toasts/SKILL.md](../writing-notifications-and-toasts/SKILL.md)
+- Glossary: [../../reference/glossary.md](../../reference/glossary.md)
+- Words to use: [../../reference/words-to-use.md](../../reference/words-to-use.md)
+- Words to avoid: [../../reference/words-to-avoid.md](../../reference/words-to-avoid.md)
