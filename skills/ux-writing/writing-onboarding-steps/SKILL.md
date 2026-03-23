@@ -90,3 +90,6 @@ Use statements when providing clear, direct instructions:
 - Templates: [TEMPLATES.md](TEMPLATES.md)
 - Rubric: [RUBRIC.md](RUBRIC.md)
 - Examples: [EXAMPLES.md](EXAMPLES.md)
+- Glossary: [../../reference/glossary.md](../../reference/glossary.md)
+- Words to use: [../../reference/words-to-use.md](../../reference/words-to-use.md)
+- Words to avoid: [../../reference/words-to-avoid.md](../../reference/words-to-avoid.md)
