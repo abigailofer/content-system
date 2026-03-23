@@ -54,7 +54,8 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 - Communicate feature value before the flow starts — inside the flow, focus on completing steps, not selling (style guide §13.10)
 - Never use exclamation points (style guide §1.7.5)
 
-### CTA and modal title correlation
+### H1 uniqueness
+- H1 must be unique across all pages — flag if it matches a known page title and ask the user to confirm uniqueness if unsure
 - If a step CTA launches a modal, the modal title must match or closely reflect the CTA label
 - Small variation is allowed to add context, but the core action must be the same
 - Good: CTA "Add to Jira" → modal title "Add issue to Jira"
