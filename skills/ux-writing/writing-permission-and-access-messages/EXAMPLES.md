@@ -1,6 +1,9 @@
-# Examples
+# Examples: Writing Permission and Access Messages
+
+---
 
 ## Example 1: Location permission request
+
 **Input:**
 - Permission type: system (location)
 - State: requesting
@@ -17,12 +20,13 @@ permission_message:
   allow:
     label: "Allow"
   deny:
-    label: "Not now"
+    label: "Not Now"
 ```
 
 ---
 
 ## Example 2: Notification permission request
+
 **Input:**
 - Permission type: system (notifications)
 - State: requesting
@@ -39,12 +43,13 @@ permission_message:
   allow:
     label: "Allow"
   deny:
-    label: "Not now"
+    label: "Not Now"
 ```
 
 ---
 
 ## Example 3: Permission previously denied
+
 **Input:**
 - Permission type: system (camera)
 - State: denied
@@ -59,7 +64,7 @@ permission_message:
   headline: "Camera access needed"
   explanation: "To scan QR codes, allow camera access in your device settings."
   allow:
-    label: "Open settings"
+    label: "Open Settings"
   deny:
     label: "Cancel"
 ```
@@ -67,6 +72,7 @@ permission_message:
 ---
 
 ## Example 4: Role-based access denied
+
 **Input:**
 - Permission type: role
 - State: insufficient
@@ -82,14 +88,15 @@ permission_message:
   headline: "Admin access required"
   explanation: "Contact your workspace admin to change billing settings."
   allow:
-    label: "Request access"
+    label: "Request Access"
   deny:
-    label: "Go back"
+    label: "Go Back"
 ```
 
 ---
 
 ## Example 5: Feature behind paywall
+
 **Input:**
 - Permission type: feature
 - State: insufficient
@@ -105,14 +112,15 @@ permission_message:
   headline: "Upgrade to export as PDF"
   explanation: "PDF export is available on Pro plans. Start a free trial today."
   allow:
-    label: "Start free trial"
+    label: "Start Free Trial"
   deny:
-    label: "Maybe later"
+    label: "Maybe Later"
 ```
 
 ---
 
 ## Edge case: Sensitive data permission
+
 **Input:**
 - Permission type: data
 - State: requesting
@@ -130,11 +138,13 @@ pre_request:
     label: "Skip"
   privacy_link: "/privacy"
 ```
+
 Note: For sensitive permissions, use pre-request to explain before system prompt.
 
 ---
 
 ## Edge case: Session expired
+
 **Input:**
 - Permission type: data
 - State: expired
@@ -149,7 +159,7 @@ permission_message:
   headline: "Sign in again to continue"
   explanation: "Your session expired. Sign in to reconnect your account."
   allow:
-    label: "Sign in"
+    label: "Sign In"
   deny:
     label: "Cancel"
 ```
