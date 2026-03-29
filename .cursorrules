@@ -24,6 +24,7 @@ A library of **skills**—structured packages for specific content tasks. Each s
 - `technical-documentation` – How-to guides, API docs, reference docs, release notes
 - `developer-content` – CLI help, SDK docs, code comments, configuration guides
 - `mcp-and-agents` – Agent instructions, system prompts, tool descriptions, evals
+- `reference` - Glossary, Words to avoid, Words to use
 - `marketing` – Landing pages, product messaging, campaigns, app store listings
 - `editorial-and-blog` – Blog posts, case studies, thought leadership, tutorials
 - `research-and-insights` – User research synthesis, feedback analysis, audit reports
