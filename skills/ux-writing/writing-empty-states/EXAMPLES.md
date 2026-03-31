@@ -2,10 +2,10 @@
 
 ---
 
-## Example 1: First-run state
+## Example 1a: First-run — with CTA
 
 **Input:**
-- Empty state type: first-run
+- Empty state type: first-run (1a)
 - Feature: Projects
 - Target user: New user who just signed up
 - Primary action: Create project
@@ -23,15 +23,38 @@ empty_state:
 
 ---
 
-## Example 2: No results (search)
+## Example 1b: First-run — no CTA
 
 **Input:**
-- Empty state type: no-results
+- Empty state type: first-run (1b)
+- Feature: App scans
+- Target user: New user who has not yet run a scan
+- Primary action: None — user must start a scan elsewhere in the product
+
+**Output:**
+```yaml
+empty_state:
+  type: "first-run"
+  headline: "You haven't created any app scans yet"
+  support: "To create an app navigation map, start a new scan and select Scan App."
+  action:
+    label: null
+    type: null
+```
+
+Note: No CTA is shown because the user cannot act directly from this screen. Support text guides them to the relevant action elsewhere in the product.
+
+---
+
+## Example 2a: No results — search or filter returned nothing
+
+**Input:**
+- Empty state type: no-results (2a)
 - Context: User searched for "quarterly report" in documents
 - Query: "quarterly report"
 - Filters active: PDF only
 
-**Output:**
+**Output (clear filters approach):**
 ```yaml
 empty_state:
   type: "no-results"
@@ -42,15 +65,47 @@ empty_state:
     type: "search"
 ```
 
+**Output (view all approach):**
+```yaml
+empty_state:
+  type: "no-results"
+  headline: "No results for \"Q4\""
+  support: "Try adjusting the date range or removing filters."
+  action:
+    label: "View All Reports"
+    type: "navigate"
+```
+
+Note: Use "View All [Items]" when resetting to the full list is more useful than incrementally removing filters. Use "Clear Filters" when the user may want to adjust filters rather than abandon the search entirely.
+
 ---
 
-## Example 3: User-cleared state
+## Example 2b: No results — possible typo
 
 **Input:**
-- Empty state type: user-cleared
+- Empty state type: no-results (2b)
+- Context: User searched for "acounting" (typo)
+- Suggestion available: "accounting"
+
+**Output:**
+```yaml
+empty_state:
+  type: "no-results"
+  headline: "No results for \"acounting\""
+  support: "Did you mean \"accounting\"?"
+  action:
+    label: "Search \"Accounting\""
+    type: "search"
+```
+
+---
+
+## Example 3a: User-cleared — user can create more
+
+**Input:**
+- Empty state type: user-cleared (3a)
 - Feature: Notifications
 - Context: User marked all notifications as read / cleared inbox
-- Primary action: None needed, but can navigate
 
 **Output:**
 ```yaml
@@ -65,31 +120,10 @@ empty_state:
 
 ---
 
-## Example 4: Error-caused empty state
+## Example 3b: User-cleared — user cannot add content
 
 **Input:**
-- Empty state type: error-caused
-- Feature: Activity feed
-- Context: API call failed, cannot load items
-- Primary action: Retry
-
-**Output:**
-```yaml
-empty_state:
-  type: "error-caused"
-  headline: "Couldn't load activity"
-  support: "Check your connection and try again."
-  action:
-    label: "Refresh Page"
-    type: "navigate"
-```
-
----
-
-## Edge case: Empty state with no possible action
-
-**Input:**
-- Empty state type: user-cleared
+- Empty state type: user-cleared (3b)
 - Feature: Shared with me (files others share with you)
 - Context: No one has shared files with this user
 - Primary action: None — user cannot create content here
@@ -109,43 +143,42 @@ Note: When user cannot take action, omit action button. Support text sets expect
 
 ---
 
-## Edge case: No results with query suggestions
+## Example 4a: Error — retry available
 
 **Input:**
-- Empty state type: no-results
-- Context: User searched for "acounting" (typo)
-- Suggestion available: "accounting"
+- Empty state type: error-caused (4a)
+- Feature: Activity feed
+- Context: API call failed, cannot load items
+- Primary action: Retry
 
 **Output:**
 ```yaml
 empty_state:
-  type: "no-results"
-  headline: "No results for \"acounting\""
-  support: "Did you mean \"accounting\"?"
+  type: "error-caused"
+  headline: "Couldn't load activity"
+  support: "Check your connection and try again."
   action:
-    label: "Search \"Accounting\""
-    type: "search"
+    label: "Refresh Page"
+    type: "navigate"
 ```
 
 ---
 
-## Example 6: No results with view all option
+## Example 4b: Error — back to home is better recovery
 
 **Input:**
-- Empty state type: no-results
-- Context: User filtered reports by "Q4" with date range applied, no matches
-- Filters active: Date range + keyword
-- View all available: Yes
+- Empty state type: error-caused (4b)
+- Feature: Report detail page
+- Context: Page failed to load and retry is unlikely to help
+- Primary action: Back to Home
 
 **Output:**
 ```yaml
 empty_state:
-  type: "no-results"
-  headline: "No results for \"Q4\""
-  support: "Try adjusting the date range or removing filters."
+  type: "error-caused"
+  headline: "Couldn't load this report"
+  support: "Try refreshing the page or go back to home."
   action:
-    label: "View All Reports"
+    label: "Back to Home"
     type: "navigate"
 ```
-
-Note: "View All [Items]" is preferred over "Clear Filters" when resetting to the full list is more useful than incrementally removing filters.
