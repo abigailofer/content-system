@@ -19,11 +19,16 @@
 - [ ] Support button label is "Contact Support"
 - [ ] Support inline text is "Contact Evinced Support"
 - [ ] CTA rules followed by empty state type:
-  - First-run: primary CTA present
-  - No-results: "Clear Filters" or "View All [Items]" offered
-  - User-cleared: CTA present if user can populate; omitted if they cannot
-  - Error-caused: recovery CTA present ("Refresh Page" or "Back to Home")
+  - First-run 1a (with CTA): primary CTA present
+  - First-run 1b (no CTA): no CTA present; support text guides user or sets expectation
+  - No-results 2a: "Clear Filters" or "View All [Items]" offered
+  - No-results 2b: corrected query offered as CTA
+  - User-cleared 3a: CTA present
+  - User-cleared 3b: CTA omitted; support text sets expectation
+  - Error-caused 4a: "Refresh Page" CTA present
+  - Error-caused 4b: "Back to Home" CTA present
 - [ ] First-run states include motivation or value, not just "nothing here"
+- [ ] First-run 1b support text either guides the user to act elsewhere, or sets expectation that content will appear here
 - [ ] No-results states suggest how to get results
 - [ ] Message does not make user feel they did something wrong
 - [ ] Copy matches the content type (items, projects, messages, etc.)
@@ -38,6 +43,7 @@
 - [ ] Support text is missing a trailing period (unless ending with a link)
 - [ ] Action label uses sentence case or has a trailing period
 - [ ] No action provided when user can take action to populate
+- [ ] CTA present in first-run 1b state
 - [ ] No-results state offers no way to reset or adjust (no "Clear Filters" or "View All")
 - [ ] Error-caused state offers no recovery action
 - [ ] First-run state is demotivating ("You have no data")
