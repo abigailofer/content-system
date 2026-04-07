@@ -188,3 +188,24 @@ The following are approved out-of-the-box validation error messages. All are inl
 | Context | Message |
 |---------|---------|
 | Prerequisite action required | `You need to {required initial action} before you can {attempted action}` |
+| File contains errors | See Example: CSV upload with errors below |
+
+---
+
+## Example: CSV upload with errors
+
+**Input:**
+- Error type: validation
+- Context: User uploaded a CSV file that contains errors
+- User action: Uploading a file
+- Reversibility: Recoverable — user can fix and re-upload
+
+**Output:**
+```yaml
+error:
+  title: "Your file has errors"
+  body: "Your file couldn't be uploaded. Download the annotated file, fix the errors, then upload it again."
+  action:
+    label: "Download Annotated File"
+    type: "download"
+```
