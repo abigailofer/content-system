@@ -130,5 +130,5 @@ confirmation_dialog:
     label: "Discard"
     style: "destructive"
   cancel:
-    label: "Keep editing"
+    label: "Keep Editing"
 ```
