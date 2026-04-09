@@ -113,6 +113,28 @@ confirmation_dialog:
 
 ---
 
+## Example 6: Delete named map (permanent)
+
+**Input:**
+- Action: Delete a navigation map from an AppScan session
+- Item name: AppScan1
+- Reversibility: Irreversible
+- Impact: Single item permanently deleted
+
+**Output:**
+```yaml
+confirmation_dialog:
+  headline: "Delete map?"
+  body: "The AppScan1 map will be permanently deleted. You can't undo this action."
+  confirm:
+    label: "Delete Map"
+    style: "destructive"
+  cancel:
+    label: "Cancel"
+```
+
+---
+
 ## Edge case: Discard unsaved changes
 
 **Input:**
