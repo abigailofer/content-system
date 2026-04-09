@@ -169,7 +169,8 @@ The following are approved out-of-the-box validation error messages. All are inl
 | Context | Message |
 |---------|---------|
 | File type | `This file type isn't supported. Use PNG, JPG, or GIF` |
-| File size | `You can't send emails that are larger than 1 MB. Remove elements such as products or images, then try saving again.` |
+| File size (generic) | `File must be less than 2 MB` |
+| File size (email) | `Emails must be no larger than 1 MB. Remove elements such as products or images, then try saving again.` |
 
 ### Not supported
 
