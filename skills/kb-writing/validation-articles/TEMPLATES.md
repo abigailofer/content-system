@@ -47,8 +47,8 @@ Use the following template for every validation article. Sections marked **[cond
 {{fail_pattern_2_code_if_applicable}}
 ```
 
-<!-- WCAG Patterns — include only when wcag_sc != "best practice" AND published techniques exist -->
-### WCAG Patterns
+<!-- Related WCAG Techniques — include only when wcag_sc != "best practice" AND published techniques exist -->
+### Related WCAG Techniques
 
 #### Sufficient techniques
 
@@ -56,43 +56,44 @@ Use the following template for every validation article. Sections marked **[cond
 
 #### Advisory techniques
 
+<!-- Include if advisory techniques exist. If omitted on a non-best-practice entry, flag for review. -->
 [{{technique_name}}]({{technique_url}})
 
 #### Failure techniques
 
 [{{technique_name}}]({{technique_url}})
-<!-- End WCAG Patterns -->
+<!-- End Related WCAG Techniques -->
 
 ### Try It Yourself
 
 #### {{testing_method_1}}
 
-**Steps to follow**
+**Steps to follow:**
 
 1. {{step_1}}
 2. {{step_2}}
 3. {{step_3}}
 
-**Expected result**
+**Expected results**
 
 {{expected_result}}
 
-**Actual result**
+**Actual results**
 
 {{actual_result}}
 
 #### {{testing_method_2_if_applicable}}
 
-**Steps to follow**
+**Steps to follow:**
 
 1. {{step_1}}
 2. {{step_2}}
 
-**Expected result**
+**Expected results**
 
 {{expected_result}}
 
-**Actual result**
+**Actual results**
 
 {{actual_result}}
 
@@ -131,7 +132,7 @@ Use the following template for every validation article. Sections marked **[cond
 
 ## Conditional logic at a glance
 
-| Entry type | WCAG Patterns section | Rule modal word | FAQ item 2 question |
+| Entry type | Related WCAG Techniques section | Rule modal word | FAQ item 2 question |
 |---|---|---|---|
 | WCAG SC with published techniques | Include | "must" | "How does this issue relate to SC [name and number]?" |
 | WCAG SC without published techniques | Omit | "must" | "How does this issue relate to SC [name and number]?" |
@@ -150,18 +151,17 @@ Include an H3 subsection for each method that applies to the validation. Common 
 | Inspecting the browser's accessibility tree | When the issue involves ARIA roles, states, or properties |
 | Testing color contrast | When the issue involves contrast ratios |
 
-Each subsection must follow this structure:
+Each subsection must follow this structure. **Steps to follow:** appears immediately above the numbered steps, with no blank line between the label and the first step.
 
 ```markdown
-**Steps to follow**
-
+**Steps to follow:**
 1. {{step}}
 
-**Expected result**
+**Expected results**
 
 {{expected_result}}
 
-**Actual result**
+**Actual results**
 
 {{actual_result}}
 ```

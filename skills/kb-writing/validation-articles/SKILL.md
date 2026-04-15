@@ -22,8 +22,8 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 3. Write the description (~50 words per paragraph, no SC name or number, plain language)
 4. Write Pass Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
 5. Write Fail Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
-6. Write the WCAG Patterns section — only if `wcag_sc != "best practice"` AND published techniques exist at `wcag_techniques_url`
-7. Write the Try It Yourself section — H3 subsections per applicable testing method, each with Steps to follow, Expected result, and Actual result
+6. Write the Related WCAG Techniques section — only if `wcag_sc != "best practice"` AND published techniques exist at `wcag_techniques_url`
+7. Write the Try It Yourself section — H3 subsections per applicable testing method, each with Steps to follow:, Expected results, and Actual results
 8. Write the FAQ — 2 required items plus any additional ones that apply
 9. Validate output against [RUBRIC.md](RUBRIC.md) before delivering
 
@@ -32,9 +32,9 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 ## Degrees of freedom
 
 - **Fixed:** Section order, H2/H3 heading hierarchy, bold violation rule, required FAQ items 1 and 2
-- **Conditional:** WCAG Patterns section — include only when `wcag_sc != "best practice"` and published techniques are available
+- **Conditional:** Related WCAG Techniques section — include only when `wcag_sc != "best practice"` and published techniques are available
 - **Variable:** Number of Try It Yourself subsections (include all applicable testing methods); FAQ item 2 question phrasing; optional additional FAQ items
-- **Omit:** WCAG Patterns section entirely if no techniques are published at `wcag_techniques_url`
+- **Omit:** Related WCAG Techniques section entirely if no techniques are published at `wcag_techniques_url`
 
 ---
 

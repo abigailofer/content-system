@@ -14,13 +14,14 @@
 - [ ] Pass Patterns section includes 1–2 code examples, each preceded by an explanation
 - [ ] Fail Patterns section includes 1–2 code examples, each preceded by an explanation
 - [ ] No code example is speculative — all examples are included with full certainty
-- [ ] WCAG Patterns section is present when `wcag_sc != "best practice"` and published techniques exist
-- [ ] WCAG Patterns section is absent when the entry is a best practice
-- [ ] WCAG Patterns section is broken into Sufficient techniques, Advisory techniques, and Failure techniques subsections
+- [ ] Related WCAG Techniques section is present when `wcag_sc != "best practice"` and published techniques exist
+- [ ] Related WCAG Techniques section is absent when the entry is a best practice
+- [ ] Related WCAG Techniques section includes Sufficient techniques and Failure techniques subsections
+- [ ] Advisory techniques subsection is present if advisory techniques exist; if missing on a non-best-practice entry, it is flagged for review
 - [ ] Each WCAG technique is a linked box with the technique name as the link text
 - [ ] Try It Yourself heading uses Title Case
 - [ ] Each Try It Yourself method is an H3 in sentence case
-- [ ] Each Try It Yourself method has Steps to follow, Expected result, and Actual result
+- [ ] Each Try It Yourself method has Steps to follow:, Expected results, and Actual results
 - [ ] FAQ item 1 asks "Why is this issue marked as {severity}?"
 - [ ] FAQ item 2 asks "How does this issue relate to SC [SC name and number]?" (WCAG entries)
 - [ ] FAQ item 2 asks "Why is this rule considered a best practice?" (best-practice entries)
@@ -48,10 +49,10 @@
 - [ ] Description mentions the SC name or number
 - [ ] Any description paragraph exceeds 70 words
 - [ ] A code example is speculative or uncertain
-- [ ] WCAG Patterns section appears in a best-practice entry
-- [ ] WCAG Patterns section is missing from a WCAG SC entry that has published techniques
+- [ ] Related WCAG Techniques section appears in a best-practice entry
+- [ ] Related WCAG Techniques section is missing from a WCAG SC entry that has published techniques
 - [ ] Try It Yourself heading is not Title Case
-- [ ] A Try It Yourself subsection is missing Steps to follow, Expected result, or Actual result
+- [ ] A Try It Yourself subsection is missing Steps to follow:, Expected results, or Actual results
 - [ ] FAQ item 1 is missing or incorrectly phrased
 - [ ] FAQ item 2 is missing, incorrectly phrased, or uses the wrong phrasing variant for the entry type
 
@@ -72,8 +73,8 @@ Run before delivering any validation article:
 - [ ] One-line rule is bold; "must" vs "should" matches the entry type
 - [ ] Description avoids SC name and number; each paragraph is 70 words or fewer
 - [ ] All code examples are certain — no speculation included
-- [ ] WCAG Patterns section included only when applicable; technique boxes are linked
-- [ ] Try It Yourself has an H3 per testing method with Steps to follow, Expected result, and Actual result
+- [ ] Related WCAG Techniques section included only when applicable; technique boxes are linked
+- [ ] Try It Yourself has an H3 per testing method with Steps to follow:, Expected results, and Actual results
 - [ ] Both required FAQ items are present and use the correct phrasing for the entry type
 - [ ] ARIA terms are wrapped in backticks
 - [ ] American English spelling used throughout

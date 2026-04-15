@@ -7,8 +7,8 @@
 Each example shows a complete validation article output. The input block lists the variables passed to the skill. The output block is the finished article.
 
 Examples cover two entry types:
-- **Example 1** — a WCAG success criterion entry (all sections, including WCAG Patterns)
-- **Example 2** — a best-practice entry (WCAG Patterns section omitted; "should" in rule; adjusted FAQ)
+- **Example 1** — a WCAG success criterion entry (all sections, including Related WCAG Techniques)
+- **Example 2** — a best-practice entry (Related WCAG Techniques section omitted; "should" in rule; adjusted FAQ)
 
 ---
 
@@ -63,7 +63,7 @@ The `<label>` element is present in the HTML but is visually hidden using CSS in
 <input type="email" id="email" placeholder="Email address">
 ```
 
-### WCAG Patterns
+### Related WCAG Techniques
 
 #### Sufficient techniques
 
@@ -85,49 +85,49 @@ The `<label>` element is present in the HTML but is visually hidden using CSS in
 
 #### Using a screen reader
 
-**Steps to follow**
+**Steps to follow:**
 
 1. Open a screen reader.
 2. Navigate to a form that uses placeholder text as the only label.
 3. Move focus to the input field using the screen reader.
 
-**Expected result**
+**Expected results**
 
 The screen reader reads the field's accessible name, indicating its purpose.
 
-**Actual result**
+**Actual results**
 
 The screen reader reads only the placeholder text, or announces the field with no name at all.
 
 #### Using a keyboard
 
-**Steps to follow**
+**Steps to follow:**
 
 1. Navigate to the input field using the Tab key.
 2. Type something into the field.
 3. Navigate away from the field, then Tab back to it.
 
-**Expected result**
+**Expected results**
 
 The field still communicates its purpose after you return to it.
 
-**Actual result**
+**Actual results**
 
 The placeholder text is no longer visible, and there is no persistent label to identify the field.
 
 #### Inspecting the browser's accessibility tree
 
-**Steps to follow**
+**Steps to follow:**
 
 1. Open your browser's developer tools.
 2. Go to the Accessibility panel.
 3. Select the input field and inspect its accessible name.
 
-**Expected result**
+**Expected results**
 
 The input has an accessible name that describes its purpose.
 
-**Actual result**
+**Actual results**
 
 The accessible name is empty, or it matches the placeholder text rather than a proper label.
 
@@ -184,17 +184,17 @@ The `title` attribute duplicates the visible button text. This creates a redunda
 
 #### Inspecting the browser's accessibility tree
 
-**Steps to follow**
+**Steps to follow:**
 
 1. Open your browser's developer tools.
 2. Go to the Accessibility panel.
 3. Select the element with a `title` attribute and inspect its accessible name and description.
 
-**Expected result**
+**Expected results**
 
 The element's accessible name and description are distinct and each conveys unique information.
 
-**Actual result**
+**Actual results**
 
 The accessible name and description contain identical text, indicating the `title` attribute is redundant.
 
