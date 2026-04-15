@@ -35,7 +35,7 @@ HCS is a library of **skills**—structured packages for specific content tasks.
 
 Quick-match triggers to skills. See `governance/skill-catalog.md` for full details.
 
-**kb-writing:** `validation-articles` (validation article, KB entry, knowledge base, accessibility validation, WCAG entry)
+**kb-writing:** `validation-articles` (validation article, KB entry, knowledge base, accessibility validation, WCAG entry) · `general-articles` (general article, accessibility article, article rewrite, KB article)
 
 **ux-writing:** `writing-error-messages` (error, error message, failure) · `writing-empty-states` (empty state, no results, blank state) · `writing-confirmation-dialogs` (confirmation, dialog, modal, delete confirm) · `writing-onboarding-steps` (onboarding, welcome, getting started) · `writing-settings-and-preferences` (settings, preferences, options) · `writing-status-and-progress` (status, progress, loading) · `writing-form-labels-and-helptext` (form, label, placeholder, help text) · `writing-permission-and-access-messages` (permission, access, allow, deny) · `writing-loading-and-latency-messaging` (loading, wait, processing) · `writing-notifications-and-toasts` (notification, toast, alert, snackbar) · `writing-accessible-ui-copy` (accessible copy, screen reader, a11y)
 
