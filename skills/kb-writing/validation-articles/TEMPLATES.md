@@ -63,7 +63,7 @@ Use the following template for every validation article. Sections marked **[cond
 [{{technique_name}}]({{technique_url}})
 <!-- End WCAG Patterns -->
 
-### Try it Yourself
+### Try It Yourself
 
 #### {{testing_method_1}}
 
@@ -98,7 +98,7 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### FAQ
 
-**Why is this issue marked as `{{severity}}`?**
+**Why is this issue marked as {{severity}}?**
 
 {{severity_explanation}}
 
@@ -108,7 +108,7 @@ Use the following template for every validation article. Sections marked **[cond
 {{wcag_sc_explanation}}
 
 <!-- Best-practice entry — use this phrasing when wcag_sc == "best practice" -->
-**Why is this validation considered a best practice?**
+**Why is this rule considered a best practice?**
 
 {{best_practice_explanation}}
 <!-- End conditional FAQ item 2 -->
@@ -135,11 +135,11 @@ Use the following template for every validation article. Sections marked **[cond
 |---|---|---|---|
 | WCAG SC with published techniques | Include | "must" | "How does this issue relate to SC [name and number]?" |
 | WCAG SC without published techniques | Omit | "must" | "How does this issue relate to SC [name and number]?" |
-| Best practice | Omit | "should" | "Why is this validation considered a best practice?" |
+| Best practice | Omit | "should" | "Why is this rule considered a best practice?" |
 
 ---
 
-## Try it Yourself — common testing methods
+## Try It Yourself — common testing methods
 
 Include an H3 subsection for each method that applies to the validation. Common methods are listed below.
 

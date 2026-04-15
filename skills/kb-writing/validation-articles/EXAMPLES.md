@@ -81,7 +81,7 @@ The `<label>` element is present in the HTML but is visually hidden using CSS in
 
 [F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"](https://www.w3.org/WAI/WCAG21/Techniques/failures/F65)
 
-### Try it Yourself
+### Try It Yourself
 
 #### Using a screen reader
 
@@ -133,7 +133,7 @@ The accessible name is empty, or it matches the placeholder text rather than a p
 
 ### FAQ
 
-**Why is this issue marked as `critical`?**
+**Why is this issue marked as critical?**
 
 This issue is critical because people who use assistive technology — particularly screen reader users — have no reliable way to determine the purpose of an unlabeled field. Without an accessible name, a screen reader may announce only the input type, such as "edit text," giving no indication of what information to enter. This affects form completion across all assistive technology and browser combinations.
 
@@ -180,7 +180,7 @@ The `title` attribute duplicates the visible button text. This creates a redunda
 <button title="Submit form">Submit form</button>
 ```
 
-### Try it Yourself
+### Try It Yourself
 
 #### Inspecting the browser's accessibility tree
 
@@ -200,10 +200,10 @@ The accessible name and description contain identical text, indicating the `titl
 
 ### FAQ
 
-**Why is this issue marked as `needs review`?**
+**Why is this issue marked as needs review?**
 
 This issue is marked as needs review because the impact varies by browser and assistive technology configuration. In some environments, a redundant `title` attribute causes a screen reader to announce the same information twice, which can disorient users. In others, it has no effect. The inconsistency in support makes it a pattern worth flagging for manual review.
 
-**Why is this validation considered a best practice?**
+**Why is this rule considered a best practice?**
 
 The `title` attribute has inconsistent support across assistive technology and browsers, so it is not a reliable way to convey information. Removing redundant `title` attributes reduces the risk of double-announcement and keeps the accessibility tree clean. While no WCAG success criterion directly prohibits a redundant `title`, consistent accessible-name practices improve the experience for assistive technology users across all environments.
