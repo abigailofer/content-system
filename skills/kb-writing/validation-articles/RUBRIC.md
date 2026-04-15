@@ -28,6 +28,7 @@
 
 ### Style
 - [ ] ARIA attributes, roles, states, landmark regions, and form labels are wrapped in backticks
+- [ ] Attribute references in prose include the word "attribute" — for example, "the `alt` attribute", not "the `alt`"
 - [ ] No periods at the end of bullet-point fragments
 - [ ] Periods present on bullet points that are full sentences
 - [ ] H1 and H2 headings use Title Case (MLA rules)
@@ -58,6 +59,7 @@
 
 ### Style
 - [ ] ARIA terms appear without backticks
+- [ ] An attribute is referenced in prose without the word "attribute" — for example, "the `alt`" instead of "the `alt` attribute"
 - [ ] Periods appear at the end of bullet-point fragments
 - [ ] H3 or H4 headings use Title Case instead of sentence case
 - [ ] British English spelling used ("cancelled", "labelled", "pop-up", and so on)

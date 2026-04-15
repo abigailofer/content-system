@@ -48,6 +48,7 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 | Description paragraphs | ~50 words each; no paragraph exceeds 70 words; do not mention SC name or number |
 | Code examples | Only include examples you are certain are correct — never speculate |
 | ARIA attributes, roles, states, landmark regions, form labels | Wrap in backticks |
+| Attribute references in prose | Always include the word "attribute" when referring to an HTML or ARIA attribute in prose — for example, "the `alt` attribute", not "the `alt`" |
 | Bullet points | No period for fragments; period required for full sentences |
 | H1 and H2 headings | Title Case (MLA rules) |
 | H3 and H4 headings | Sentence case |
