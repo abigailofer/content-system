@@ -17,14 +17,14 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 ---
 
 ## Workflow
-1. Write the validation name as an H2 — lowercase, words separated by hyphens
-2. Write the one-line violation rule in bold — use "must" if a WCAG SC applies; use "should" if best practice
-3. Write the description (~50 words per paragraph, no SC name or number, plain language)
-4. Write Pass Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
-5. Write Fail Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
-6. Write the Related WCAG Techniques section — only if `wcag_sc != "best practice"` AND published techniques exist at `wcag_techniques_url`
-7. Write the Try It Yourself section — H3 subsections per applicable testing method, each with Steps to follow:, Expected results, and Actual results
-8. Write the FAQ — 2 required items plus any additional ones that apply
+1. Verify the validation name as an H2 — lowercase, words separated by hyphens
+2. Verify the one-line violation rule in bold — use "must" if a WCAG SC applies; use "should" if best practice
+3. Verify the description (~50 words per paragraph, no SC name or number, plain language)
+4. Verify Pass Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
+5. Verify Fail Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
+6. Verify the Related WCAG Techniques section — only if `wcag_sc != "best practice"` AND published techniques exist at `wcag_techniques_url`
+7. Verify the Try It Yourself section — H3 subsections per applicable testing method, each with Steps to follow:, Expected results, and Actual results
+8. Verify the FAQ — 2 required items plus any additional ones that apply
 9. Validate output against [RUBRIC.md](RUBRIC.md) before delivering
 
 ---
