@@ -54,6 +54,9 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 | H3 and H4 headings | Sentence case |
 | Spelling | American English |
 | Tone | Active voice; address the reader as "you"; Grade 9 reading level; no emojis |
+| Em dash | Do not use em dashes (—) in any prose |
+| Punctuation | Do not overuse punctuation — especially semicolons (;) and commas (,). Break complex sentences into shorter ones instead of chaining clauses |
+| Clarity | Writing must be plain, direct, and easy to read. Do not use convoluted sentence structures |
 
 ### Capitalization — Title Case (MLA rules)
 Capitalize the first and last word and every major word (nouns, pronouns, verbs, adjectives, adverbs). Do not capitalize articles, prepositions, or conjunctions of three letters or fewer unless they start or end the heading.

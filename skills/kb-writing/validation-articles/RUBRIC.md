@@ -37,6 +37,9 @@
 - [ ] Active voice used throughout; "you" addresses the reader
 - [ ] Grade 9 reading level maintained
 - [ ] No banned words from SKILL.md word list
+- [ ] No em dashes present
+- [ ] Punctuation is not overused; semicolons and commas do not chain clauses that would read more clearly as separate sentences
+- [ ] Writing is plain and direct — no convoluted phrasing
 
 ---
 
@@ -65,6 +68,9 @@
 - [ ] British English spelling used ("cancelled", "labelled", "pop-up", and so on)
 - [ ] Passive voice used without a clear reason
 - [ ] Banned words from SKILL.md word list appear in the output
+- [ ] Em dash (—) appears in prose
+- [ ] Semicolons or commas used to chain clauses that should be separate sentences
+- [ ] Writing is convoluted or difficult to parse
 
 ---
 
