@@ -14,6 +14,19 @@ Collect or confirm:
 
 Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md](RUBRIC.md).
 
+### Determining entry type
+When reviewing an existing article, determine the entry type from the article content — not from supplementary metadata such as "Standards and regulations" labels. Those fields may reference WCAG criteria even for best-practice entries and must not be used to classify the article.
+
+Use these signals from inside the article body:
+
+| Signal | WCAG SC entry | Best practice entry |
+|---|---|---|
+| Rule modal word | "must" | "should" |
+| FAQ item 2 question | "How does this issue relate to SC [name and number]?" | "Why is this rule considered a best practice?" |
+| Related WCAG Techniques section | Present | Absent |
+
+If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
+
 ---
 
 ## Workflow

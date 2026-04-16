@@ -2,6 +2,20 @@
 
 ---
 
+## Determine entry type before you validate
+
+Determine entry type from the article content — not from supplementary metadata such as "Standards and regulations" labels. Those fields may reference WCAG criteria even for best-practice entries.
+
+| Signal | WCAG SC entry | Best practice entry |
+|---|---|---|
+| Rule modal word | "must" | "should" |
+| FAQ item 2 question | "How does this issue relate to SC [name and number]?" | "Why is this rule considered a best practice?" |
+| Related WCAG Techniques section | Present | Absent |
+
+If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
+
+---
+
 ## Pass if all are true
 
 ### Structure
