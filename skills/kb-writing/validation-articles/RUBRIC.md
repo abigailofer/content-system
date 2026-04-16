@@ -10,7 +10,7 @@
 - [ ] Rule uses "must" when a WCAG success criterion applies
 - [ ] Rule uses "should" when the entry is a best practice
 - [ ] Description does not mention the SC name or number
-- [ ] Each description paragraph is approximately 50 words and does not exceed 70 words
+- [ ] Each description paragraph does not exceed 50 words
 - [ ] Pass Patterns section includes 1–2 code examples, each preceded by an explanation
 - [ ] Fail Patterns section includes 1–2 code examples, each preceded by an explanation
 - [ ] No code example is speculative — all examples are included with full certainty
@@ -51,7 +51,7 @@
 - [ ] Rule uses "must" for a best-practice entry
 - [ ] Rule uses "should" for a WCAG SC entry
 - [ ] Description mentions the SC name or number
-- [ ] Any description paragraph exceeds 70 words
+- [ ] Any description paragraph exceeds 50 words
 - [ ] A code example is speculative or uncertain
 - [ ] Related WCAG Techniques section appears in a best-practice entry
 - [ ] Related WCAG Techniques section is missing from a WCAG SC entry that has published techniques
@@ -69,7 +69,7 @@
 - [ ] Passive voice used without a clear reason
 - [ ] Banned words from SKILL.md word list appear in the output
 - [ ] Em dash (—) appears in prose
-- [ ] Semicolons or commas used to chain clauses that should be separate sentences
+- [ ] Semicolons or commas used to chain clauses that would read more clearly with a conjunction, restructured as one sentence, or split into two
 - [ ] Writing is convoluted or difficult to parse
 
 ---
@@ -79,7 +79,7 @@ Run before delivering any validation article:
 
 - [ ] Validation name is H2, lowercase, hyphenated
 - [ ] One-line rule is bold; "must" vs "should" matches the entry type
-- [ ] Description avoids SC name and number; each paragraph is 70 words or fewer
+- [ ] Description avoids SC name and number; each paragraph is 50 words or fewer
 - [ ] All code examples are certain — no speculation included
 - [ ] Related WCAG Techniques section included only when applicable; technique boxes are linked
 - [ ] Try It Yourself has an H3 per testing method with Steps to follow:, Expected results, and Actual results

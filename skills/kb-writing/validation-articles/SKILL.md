@@ -45,7 +45,7 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 | Validation name (H2) | Lowercase, hyphenated, no trailing period |
 | One-line violation rule | Bold, exactly 1 sentence, ends with a period |
 | "must" vs "should" | Use "must" when a WCAG SC applies; use "should" for best-practice entries |
-| Description paragraphs | ~50 words each; no paragraph exceeds 70 words; do not mention SC name or number |
+| Description paragraphs | 50 words maximum per paragraph; no minimum; do not mention SC name or number |
 | Code examples | Only include examples you are certain are correct — never speculate |
 | ARIA attributes, roles, states, landmark regions, form labels | Wrap in backticks |
 | Attribute references in prose | Always include the word "attribute" when referring to an HTML or ARIA attribute in prose — for example, "the `alt` attribute", not "the `alt`" |
@@ -55,7 +55,7 @@ Then produce output using [TEMPLATES.md](TEMPLATES.md). Validate with [RUBRIC.md
 | Spelling | American English |
 | Tone | Active voice; address the reader as "you"; Grade 9 reading level; no emojis |
 | Em dash | Do not use em dashes (—) in any prose |
-| Punctuation | Do not overuse punctuation — especially semicolons (;) and commas (,). Break complex sentences into shorter ones instead of chaining clauses |
+| Punctuation | Do not overuse punctuation — especially semicolons (;) and commas (,). Rewrite for clarity using the most logical approach: a conjunction, a restructured sentence, or two shorter sentences |
 | Clarity | Writing must be plain, direct, and easy to read. Do not use convoluted sentence structures |
 
 ### Capitalization — Title Case (MLA rules)
