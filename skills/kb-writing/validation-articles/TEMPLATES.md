@@ -78,13 +78,9 @@ Use the following template for every validation article. Sections marked **[cond
 2. {{step_2}}
 3. {{step_3}}
 
-**Expected results**
+**Expected results**: {{expected_result}}
 
-{{expected_result}}
-
-**Actual results**
-
-{{actual_result}}
+**Actual results**: {{actual_result}}
 
 #### {{testing_method_2_if_applicable}}
 
