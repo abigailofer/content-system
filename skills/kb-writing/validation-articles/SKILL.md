@@ -59,7 +59,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 | Validation name (H2) | Lowercase, hyphenated, no trailing period |
 | One-line violation rule | Bold, exactly 1 sentence, ends with a period |
 | "must" vs "should" | Use "must" when a WCAG SC applies; use "should" for best-practice entries |
-| Description paragraphs | 50 words maximum per paragraph; no minimum; do not mention SC name or number |
+| Description paragraphs | 50 words maximum per paragraph; no minimum; do not mention SC name or number. The description must answer two questions: what is the issue, and why is it a problem. It must not include instructions on how to solve the issue — remediation guidance belongs elsewhere in the article |
 | Code examples | Only include examples you are certain are correct — never speculate |
 | ARIA attributes, roles, states, landmark regions, form labels | Wrap in backticks |
 | Attribute references in prose | Always include the word "attribute" when referring to an HTML or ARIA attribute in prose — for example, "the `alt` attribute", not "the `alt`" |

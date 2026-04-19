@@ -25,6 +25,8 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Rule uses "should" when the entry is a best practice
 - [ ] Description does not mention the SC name or number
 - [ ] Each description paragraph does not exceed 50 words
+- [ ] Description addresses what the issue is and why it is a problem
+- [ ] Description does not include instructions on how to solve the issue
 - [ ] Pass Patterns section includes 1–2 code examples, each preceded by an explanation
 - [ ] Fail Patterns section includes 1–2 code examples, each preceded by an explanation
 - [ ] No code example is speculative — all examples are included with full certainty
@@ -67,6 +69,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Rule uses "should" for a WCAG SC entry
 - [ ] Description mentions the SC name or number
 - [ ] Any description paragraph exceeds 50 words
+- [ ] Description includes instructions on how to solve the issue
 - [ ] A code example is speculative or uncertain
 - [ ] Related WCAG Techniques section appears in a best-practice entry
 - [ ] Related WCAG Techniques section is missing from a WCAG SC entry that has published techniques
