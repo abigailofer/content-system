@@ -26,11 +26,10 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Description does not mention the SC name or number
 - [ ] Each description paragraph does not exceed 50 words
 - [ ] Description addresses what the issue is and why it is a problem
-- [ ] Pass Patterns section includes 1–2 code examples, each preceded by a description line (H3)
-- [ ] Fail Patterns section includes 1–2 code examples, each preceded by a description line (H3)
-- [ ] Each pattern title contains a verb, uses present tense, and describes the example — not why it passes or fails
-- [ ] Pattern title is an H3 when an explanation sentence follows it, with no trailing period
-- [ ] Pattern title is body text (not a heading) when no explanation sentence follows it
+- [ ] Pass Patterns section includes at least one code example, each preceded by a title
+- [ ] Fail Patterns section includes at least one code example, each preceded by a title
+- [ ] Pattern title is an H3 with no trailing period when an explanation sentence follows it — the H3 may be a concise noun phrase
+- [ ] Pattern title is body text (not a heading) and a full sentence with a verb in present tense when no explanation sentence follows it — it describes the example, not why it passes or fails
 - [ ] Explanation sentences are used consistently — if one pattern has one, all patterns in that section have one
 - [ ] No code example is speculative — all examples are included with full certainty
 - [ ] Related WCAG Techniques section is present when `wcag_sc != "best practice"` and published techniques exist
@@ -73,9 +72,10 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Description mentions the SC name or number
 - [ ] Any description paragraph exceeds 50 words
 - [ ] A code example is speculative or uncertain
-- [ ] A pattern title is a noun phrase with no verb — for example, "A list with the required children"
-- [ ] A pattern title explains why the example passes or fails instead of describing what it shows — for example, "A menu contains a list, which causes a semantics conflict"
+- [ ] A body text pattern title is a noun phrase with no verb — for example, "A list with the required children"
+- [ ] A body text pattern title explains why the example passes or fails instead of describing what it shows — for example, "A menu contains a list, which causes a semantics conflict"
 - [ ] A pattern title is an H3 but has no explanation sentence following it
+- [ ] A pattern title is body text but is followed by an explanation sentence
 - [ ] An H3 pattern title ends with a period
 - [ ] A pattern title is body text but is followed by an explanation sentence
 - [ ] Explanation sentences are used inconsistently — some patterns have one and others do not
