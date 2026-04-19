@@ -21,42 +21,34 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Pass Patterns
 
-<!-- Description line (H3): one short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it passes. Example: "A list contains the required `listitem` children." -->
-{{pass_pattern_1_description}}
+<!-- Use ONE of the two structures below for every pattern in the section. The structure must be consistent — do not mix. -->
 
-<!-- Explanation sentence: optional. One sentence providing more context about the example. If used for one pattern, it must be used for all patterns in this section. -->
-{{pass_pattern_1_explanation_if_used}}
+<!-- STRUCTURE A — with explanation sentence: title is H3, followed by one explanation sentence -->
+#### {{pass_pattern_title}}
 
-```html
-{{pass_pattern_1_code}}
-```
+{{pass_pattern_explanation}}
 
-{{pass_pattern_2_description_if_applicable}}
-
-{{pass_pattern_2_explanation_if_used}}
+<!-- STRUCTURE B — without explanation sentence: title is body text (no heading), followed directly by code -->
+{{pass_pattern_title}}
 
 ```html
-{{pass_pattern_2_code_if_applicable}}
+{{pass_pattern_code}}
 ```
 
 ### Fail Patterns
 
-<!-- Description line (H3): one short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it fails. Example: "A list is missing its required children." -->
-{{fail_pattern_1_description}}
+<!-- Use ONE of the two structures below for every pattern in the section. The structure must be consistent — do not mix. -->
 
-<!-- Explanation sentence: optional. One sentence providing more context about the example. If used for one pattern, it must be used for all patterns in this section. -->
-{{fail_pattern_1_explanation_if_used}}
+<!-- STRUCTURE A — with explanation sentence: title is H3, followed by one explanation sentence -->
+#### {{fail_pattern_title}}
 
-```html
-{{fail_pattern_1_code}}
-```
+{{fail_pattern_explanation}}
 
-{{fail_pattern_2_description_if_applicable}}
-
-{{fail_pattern_2_explanation_if_used}}
+<!-- STRUCTURE B — without explanation sentence: title is body text (no heading), followed directly by code -->
+{{fail_pattern_title}}
 
 ```html
-{{fail_pattern_2_code_if_applicable}}
+{{fail_pattern_code}}
 ```
 
 <!-- Related WCAG Techniques — include only when wcag_sc != "best practice" AND published techniques exist -->

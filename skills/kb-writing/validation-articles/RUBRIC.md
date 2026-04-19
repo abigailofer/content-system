@@ -28,8 +28,10 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Description addresses what the issue is and why it is a problem
 - [ ] Pass Patterns section includes 1–2 code examples, each preceded by a description line (H3)
 - [ ] Fail Patterns section includes 1–2 code examples, each preceded by a description line (H3)
-- [ ] Each description line contains a verb, uses present tense, and describes the example — not why it passes or fails
-- [ ] Explanation sentences below the H3 are used consistently — if one pattern has one, all patterns in that section have one
+- [ ] Each pattern title contains a verb, uses present tense, and describes the example — not why it passes or fails
+- [ ] Pattern title is an H3 when an explanation sentence follows it
+- [ ] Pattern title is body text (not a heading) when no explanation sentence follows it
+- [ ] Explanation sentences are used consistently — if one pattern has one, all patterns in that section have one
 - [ ] No code example is speculative — all examples are included with full certainty
 - [ ] Related WCAG Techniques section is present when `wcag_sc != "best practice"` and published techniques exist
 - [ ] Related WCAG Techniques section is absent when the entry is a best practice
@@ -71,8 +73,10 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Description mentions the SC name or number
 - [ ] Any description paragraph exceeds 50 words
 - [ ] A code example is speculative or uncertain
-- [ ] A pass or fail pattern description line is a noun phrase with no verb — for example, "A list with the required children"
-- [ ] A pass or fail pattern description line explains why the example passes or fails instead of describing what it shows — for example, "A menu contains a list, which causes a semantics conflict"
+- [ ] A pattern title is a noun phrase with no verb — for example, "A list with the required children"
+- [ ] A pattern title explains why the example passes or fails instead of describing what it shows — for example, "A menu contains a list, which causes a semantics conflict"
+- [ ] A pattern title is an H3 but has no explanation sentence following it
+- [ ] A pattern title is body text but is followed by an explanation sentence
 - [ ] Explanation sentences are used inconsistently — some patterns have one and others do not
 - [ ] Related WCAG Techniques section appears in a best-practice entry
 - [ ] Related WCAG Techniques section is missing from a WCAG SC entry that has published techniques
