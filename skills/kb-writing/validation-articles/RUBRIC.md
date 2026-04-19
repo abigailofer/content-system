@@ -26,9 +26,10 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Description does not mention the SC name or number
 - [ ] Each description paragraph does not exceed 50 words
 - [ ] Description addresses what the issue is and why it is a problem
-- [ ] Pass Patterns section includes 1–2 code examples, each preceded by a short description line and an explanation sentence
-- [ ] Fail Patterns section includes 1–2 code examples, each preceded by a short description line and an explanation sentence
+- [ ] Pass Patterns section includes 1–2 code examples, each preceded by a description line (H3)
+- [ ] Fail Patterns section includes 1–2 code examples, each preceded by a description line (H3)
 - [ ] Each description line contains a verb, uses present tense, and describes the example — not why it passes or fails
+- [ ] Explanation sentences below the H3 are used consistently — if one pattern has one, all patterns in that section have one
 - [ ] No code example is speculative — all examples are included with full certainty
 - [ ] Related WCAG Techniques section is present when `wcag_sc != "best practice"` and published techniques exist
 - [ ] Related WCAG Techniques section is absent when the entry is a best practice
@@ -72,7 +73,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] A code example is speculative or uncertain
 - [ ] A pass or fail pattern description line is a noun phrase with no verb — for example, "A list with the required children"
 - [ ] A pass or fail pattern description line explains why the example passes or fails instead of describing what it shows — for example, "A menu contains a list, which causes a semantics conflict"
-- [ ] A pass or fail pattern is missing its explanation sentence
+- [ ] Explanation sentences are used inconsistently — some patterns have one and others do not
 - [ ] Related WCAG Techniques section appears in a best-practice entry
 - [ ] Related WCAG Techniques section is missing from a WCAG SC entry that has published techniques
 - [ ] Try It Yourself heading is not Title Case

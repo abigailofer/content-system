@@ -21,11 +21,11 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Pass Patterns
 
-<!-- Description line: one short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it passes. Example: "A list contains the required `listitem` children." -->
+<!-- Description line (H3): one short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it passes. Example: "A list contains the required `listitem` children." -->
 {{pass_pattern_1_description}}
 
-<!-- Explanation sentence: one sentence providing more context about the example. -->
-{{pass_pattern_1_explanation}}
+<!-- Explanation sentence: optional. One sentence providing more context about the example. If used for one pattern, it must be used for all patterns in this section. -->
+{{pass_pattern_1_explanation_if_used}}
 
 ```html
 {{pass_pattern_1_code}}
@@ -33,7 +33,7 @@ Use the following template for every validation article. Sections marked **[cond
 
 {{pass_pattern_2_description_if_applicable}}
 
-{{pass_pattern_2_explanation_if_applicable}}
+{{pass_pattern_2_explanation_if_used}}
 
 ```html
 {{pass_pattern_2_code_if_applicable}}
@@ -41,11 +41,11 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Fail Patterns
 
-<!-- Description line: one short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it fails. Example: "A list is missing its required children." -->
+<!-- Description line (H3): one short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it fails. Example: "A list is missing its required children." -->
 {{fail_pattern_1_description}}
 
-<!-- Explanation sentence: one sentence providing more context about the example. -->
-{{fail_pattern_1_explanation}}
+<!-- Explanation sentence: optional. One sentence providing more context about the example. If used for one pattern, it must be used for all patterns in this section. -->
+{{fail_pattern_1_explanation_if_used}}
 
 ```html
 {{fail_pattern_1_code}}
@@ -53,7 +53,7 @@ Use the following template for every validation article. Sections marked **[cond
 
 {{fail_pattern_2_description_if_applicable}}
 
-{{fail_pattern_2_explanation_if_applicable}}
+{{fail_pattern_2_explanation_if_used}}
 
 ```html
 {{fail_pattern_2_code_if_applicable}}
