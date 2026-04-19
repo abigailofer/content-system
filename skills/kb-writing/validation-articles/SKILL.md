@@ -47,6 +47,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - **Fixed:** Section order, H2/H3 heading hierarchy, bold violation rule, required FAQ items 1 and 2
 - **Conditional:** Related WCAG Techniques section — include only when `wcag_sc != "best practice"` and published techniques are available
 - **Variable:** Number of Try It Yourself subsections (include all applicable testing methods); FAQ item 2 question phrasing; optional additional FAQ items
+- **Optional:** Recommended Reading section — include after FAQ if there are relevant external references. The heading must be exactly "Recommended Reading" — do not use "Learn more", "Related Reading", or any other variant
 - **Omit:** Related WCAG Techniques section entirely if no techniques are published at `wcag_techniques_url`
 
 ---

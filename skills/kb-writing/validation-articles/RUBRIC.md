@@ -39,6 +39,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] FAQ item 1 asks "Why is this issue marked as {severity}?"
 - [ ] FAQ item 2 asks "How does this issue relate to SC [SC name and number]?" (WCAG entries)
 - [ ] FAQ item 2 asks "Why is this rule considered a best practice?" (best-practice entries)
+- [ ] Recommended Reading section, if present, uses the exact heading "Recommended Reading" and appears after FAQ
 
 ### Style
 - [ ] ARIA attributes, roles, states, landmark regions, and form labels are wrapped in backticks
@@ -73,6 +74,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] A Try It Yourself subsection is missing Steps to follow:, Expected results, or Actual results
 - [ ] FAQ item 1 is missing or incorrectly phrased
 - [ ] FAQ item 2 is missing, incorrectly phrased, or uses the wrong phrasing variant for the entry type
+- [ ] Recommended Reading section uses a heading other than "Recommended Reading" (for example, "Learn more", "Learn More", "Related Reading")
 
 ### Style
 - [ ] ARIA terms appear without backticks

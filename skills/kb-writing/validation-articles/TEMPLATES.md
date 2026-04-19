@@ -113,6 +113,12 @@ Use the following template for every validation article. Sections marked **[cond
 
 {{best_practice_explanation}}
 <!-- End conditional FAQ item 2 -->
+
+<!-- Recommended Reading — optional. Include only if relevant external references exist. -->
+### Recommended Reading
+
+- [{{reference_title}}]({{reference_url}})
+<!-- End Recommended Reading -->
 ```
 
 ---
