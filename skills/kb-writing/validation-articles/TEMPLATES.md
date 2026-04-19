@@ -21,13 +21,14 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Pass Patterns
 
-{{pass_pattern_1_explanation}}
+<!-- One short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it passes. Example: "A list contains the required `listitem` children." -->
+{{pass_pattern_1_description}}
 
 ```html
 {{pass_pattern_1_code}}
 ```
 
-{{pass_pattern_2_explanation_if_applicable}}
+{{pass_pattern_2_description_if_applicable}}
 
 ```html
 {{pass_pattern_2_code_if_applicable}}
@@ -35,13 +36,14 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Fail Patterns
 
-{{fail_pattern_1_explanation}}
+<!-- One short sentence describing what the example shows. Must contain a verb, use present tense, describe the example — not explain why it fails. Example: "A list is missing its required children." -->
+{{fail_pattern_1_description}}
 
 ```html
 {{fail_pattern_1_code}}
 ```
 
-{{fail_pattern_2_explanation_if_applicable}}
+{{fail_pattern_2_description_if_applicable}}
 
 ```html
 {{fail_pattern_2_code_if_applicable}}
