@@ -26,7 +26,6 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Description does not mention the SC name or number
 - [ ] Each description paragraph does not exceed 50 words
 - [ ] Description addresses what the issue is and why it is a problem
-- [ ] Description does not include instructions on how to solve the issue
 - [ ] Pass Patterns section includes 1–2 code examples, each preceded by a short description line and an explanation sentence
 - [ ] Fail Patterns section includes 1–2 code examples, each preceded by a short description line and an explanation sentence
 - [ ] Each description line contains a verb, uses present tense, and describes the example — not why it passes or fails
@@ -70,7 +69,6 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Rule uses "should" for a WCAG SC entry
 - [ ] Description mentions the SC name or number
 - [ ] Any description paragraph exceeds 50 words
-- [ ] Description includes instructions on how to solve the issue
 - [ ] A code example is speculative or uncertain
 - [ ] A pass or fail pattern description line is a noun phrase with no verb — for example, "A list with the required children"
 - [ ] A pass or fail pattern description line explains why the example passes or fails instead of describing what it shows — for example, "A menu contains a list, which causes a semantics conflict"

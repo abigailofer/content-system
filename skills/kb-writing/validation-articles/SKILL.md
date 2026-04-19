@@ -59,7 +59,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 | Validation name (H2) | Lowercase, hyphenated, no trailing period |
 | One-line violation rule | Bold, exactly 1 sentence, ends with a period |
 | "must" vs "should" | Use "must" when a WCAG SC applies; use "should" for best-practice entries |
-| Description paragraphs | 50 words maximum per paragraph; no minimum; do not mention SC name or number. The description must answer two questions: what is the issue, and why is it a problem. It must not include instructions on how to solve the issue — remediation guidance belongs elsewhere in the article |
+| Description paragraphs | 50 words maximum per paragraph; no minimum; do not mention SC name or number. The description must answer two questions: what is the issue, and why is it a problem |
 | Pass/fail pattern structure | Each code example must be preceded by two elements: (1) a short description line that describes what the example shows — it must contain a verb, use present tense, and describe the example rather than explain why it passes or fails (good: "A list contains the required `listitem` children"; bad: "A list with the required `listitem` children" — no verb; "A menu contains a list, which causes a semantics conflict" — explains the failure); (2) an explanation sentence that provides more context about the example |
 | Code examples | Only include examples you are certain are correct — never speculate |
 | ARIA attributes, roles, states, landmark regions, form labels | Wrap in backticks |
