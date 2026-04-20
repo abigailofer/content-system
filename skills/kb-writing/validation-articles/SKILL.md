@@ -32,11 +32,11 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 ## Workflow
 1. Verify the validation name as an H2 — lowercase, words separated by hyphens
 2. Verify the one-line violation rule in bold — use "must" if a WCAG SC applies; use "should" if best practice
-3. Verify the description (~50 words per paragraph, no SC name or number, plain language)
-4. Verify Pass Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
-5. Verify Fail Patterns — 1–2 code examples, each preceded by a short explanation; only include examples you are certain about
+3. Verify the description (50 words maximum per paragraph, no SC name or number, plain language) — if a paragraph exceeds 50 words, suggest the best way to break it into shorter paragraphs
+4. Verify Pass Patterns — 1–2 code examples, each preceded by a title; only include examples you are certain about (see Constraints for title format rules) — if a pattern uses the H3 title structure but has no explanation sentence, suggest an appropriate one
+5. Verify Fail Patterns — 1–2 code examples, each preceded by a title; only include examples you are certain about (see Constraints for title format rules) — if a pattern uses the H3 title structure but has no explanation sentence, suggest an appropriate one
 6. Verify the Related WCAG Techniques section — only if `wcag_sc != "best practice"` AND published techniques exist at `wcag_techniques_url`
-7. Verify the Try It Yourself section — H3 subsections per applicable testing method, each with Steps to follow:, Expected results, and Actual results
+7. Verify the Try It Yourself section — H3 subsections per applicable testing method, each with Steps to follow:, Expected results:, and Actual results: — the label and content are on the same line, not separated by a blank line
 8. Verify the FAQ — 2 required items plus any additional ones that apply
 9. Validate output against [RUBRIC.md](RUBRIC.md) before delivering
 
@@ -47,6 +47,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - **Fixed:** Section order, H2/H3 heading hierarchy, bold violation rule, required FAQ items 1 and 2
 - **Conditional:** Related WCAG Techniques section — include only when `wcag_sc != "best practice"` and published techniques are available
 - **Variable:** Number of Try It Yourself subsections (include all applicable testing methods); FAQ item 2 question phrasing; optional additional FAQ items
+- **Optional:** ACT Rules section — include after Related WCAG Techniques (or after Fail Patterns for best-practice entries) if ACT Rules apply to the validation. The heading must be exactly "ACT Rules"
 - **Optional:** Recommended Reading section — include after FAQ if there are relevant external references. The heading must be exactly "Recommended Reading" — do not use "Learn more", "Related Reading", or any other variant
 - **Omit:** Related WCAG Techniques section entirely if no techniques are published at `wcag_techniques_url`
 
@@ -68,7 +69,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 | H1 and H2 headings | Title Case (MLA rules) |
 | H3 and H4 headings | Sentence case |
 | Spelling | American English |
-| Tone | Active voice; address the reader as "you"; Grade 9 reading level; no emojis |
+| Tone | Active voice; address the reader as "you"; Grade 9 reading level; no emojis — passive voice is acceptable when rewriting to active would make the sentence longer |
 | Em dash | Do not use em dashes (—) in any prose |
 | Punctuation | Do not overuse punctuation — especially semicolons (;) and commas (,). Rewrite for clarity using the most logical approach: a conjunction, a restructured sentence, or two shorter sentences |
 | Clarity | Writing must be plain, direct, and easy to read. Do not use convoluted sentence structures |

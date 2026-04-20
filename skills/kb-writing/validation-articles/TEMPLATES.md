@@ -4,13 +4,30 @@
 
 ## Article structure
 
-Use the following template for every validation article. Sections marked **[conditional]** are included or omitted based on the entry type. Refer to [SKILL.md](SKILL.md) for the rules governing each condition.
+Use the following template for every validation article. Refer to [SKILL.md](SKILL.md) for the rules governing each conditional section.
+
+**Pattern title structures — choose one and apply it consistently within each section:**
+
+- **Structure A:** Title is an H3 (no trailing period), followed by one explanation sentence, then the code block. The title may be a noun phrase.
+- **Structure B:** Title is body text (no heading), a full sentence with a present-tense verb that describes the example, followed directly by the code block. No explanation sentence.
+
+**Conditional sections:**
+
+- **Related WCAG Techniques** — include only when `wcag_sc != "best practice"` and published techniques exist.
+- **Advisory techniques subsection** — include if advisory techniques exist; if none are known, omit and flag for review.
+- **ACT Rules** — optional. Include after Related WCAG Techniques (or after Fail Patterns for best-practice entries) if ACT Rules apply. The heading must be exactly "ACT Rules".
+- **Recommended Reading** — optional. Include only if relevant external references exist.
+
+**Review suggestions:**
+
+- If a description paragraph exceeds 50 words, suggest the best way to break it into shorter paragraphs.
+- If a Pass or Fail pattern uses an H3 title but has no explanation sentence, suggest an appropriate one.
 
 ---
 
 ## Full article template
 
-```markdown
+~~~markdown
 ## {{validation_name}}
 
 **{{violation_rule}}**
@@ -21,15 +38,9 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Pass Patterns
 
-<!-- Use ONE of the two structures below for every pattern in the section. The structure must be consistent — do not mix. -->
-
-<!-- STRUCTURE A — with explanation sentence: title is H3, followed by one explanation sentence -->
 #### {{pass_pattern_title}}
 
 {{pass_pattern_explanation}}
-
-<!-- STRUCTURE B — without explanation sentence: title is body text (no heading), followed directly by code -->
-{{pass_pattern_title}}
 
 ```html
 {{pass_pattern_code}}
@@ -37,21 +48,14 @@ Use the following template for every validation article. Sections marked **[cond
 
 ### Fail Patterns
 
-<!-- Use ONE of the two structures below for every pattern in the section. The structure must be consistent — do not mix. -->
-
-<!-- STRUCTURE A — with explanation sentence: title is H3, followed by one explanation sentence -->
 #### {{fail_pattern_title}}
 
 {{fail_pattern_explanation}}
-
-<!-- STRUCTURE B — without explanation sentence: title is body text (no heading), followed directly by code -->
-{{fail_pattern_title}}
 
 ```html
 {{fail_pattern_code}}
 ```
 
-<!-- Related WCAG Techniques — include only when wcag_sc != "best practice" AND published techniques exist -->
 ### Related WCAG Techniques
 
 #### Sufficient techniques
@@ -60,38 +64,38 @@ Use the following template for every validation article. Sections marked **[cond
 
 #### Advisory techniques
 
-<!-- Include if advisory techniques exist. If omitted on a non-best-practice entry, flag for review. -->
 [{{technique_name}}]({{technique_url}})
 
 #### Failure techniques
 
 [{{technique_name}}]({{technique_url}})
-<!-- End Related WCAG Techniques -->
+
+### ACT Rules
+
+[{{act_rule_title}}]({{act_rule_url}})
 
 ### Try It Yourself
 
 #### {{testing_method_1}}
 
 **Steps to follow:**
-
 1. {{step_1}}
 2. {{step_2}}
 3. {{step_3}}
 
-**Expected results**: {{expected_result}}
+**Expected results:** {{expected_result}}
 
-**Actual results**: {{actual_result}}
+**Actual results:** {{actual_result}}
 
 #### {{testing_method_2_if_applicable}}
 
 **Steps to follow:**
-
 1. {{step_1}}
 2. {{step_2}}
 
-**Expected results**: {{expected_result}}
+**Expected results:** {{expected_result}}
 
-**Actual results**: {{actual_result}}
+**Actual results:** {{actual_result}}
 
 ### FAQ
 
@@ -99,23 +103,14 @@ Use the following template for every validation article. Sections marked **[cond
 
 {{severity_explanation}}
 
-<!-- WCAG entry — use this phrasing when wcag_sc != "best practice" -->
 **How does this issue relate to SC {{wcag_sc}}?**
 
 {{wcag_sc_explanation}}
 
-<!-- Best-practice entry — use this phrasing when wcag_sc == "best practice" -->
-**Why is this rule considered a best practice?**
-
-{{best_practice_explanation}}
-<!-- End conditional FAQ item 2 -->
-
-<!-- Recommended Reading — optional. Include only if relevant external references exist. -->
 ### Recommended Reading
 
 - [{{reference_title}}]({{reference_url}})
-<!-- End Recommended Reading -->
-```
+~~~
 
 ---
 
@@ -125,8 +120,8 @@ Use the following template for every validation article. Sections marked **[cond
 |---|---|---|
 | `{{validation_name}}` | The slug for this validation | Lowercase, hyphenated — for example, `placeholder-as-label` |
 | `{{violation_rule}}` | The one-line rule statement | Bold, 1 sentence, ends with a period; "must" for WCAG SC, "should" for best practice |
-| `{{description_paragraph}}` | Explanation of the validation | ~50 words, no SC name or number, plain language |
-| `{{wcag_sc}}` | SC name and number, or `"best practice"` | For example, `1.3.1 Info and Relationships` |
+| `{{description_paragraph_1}}` | Explanation of the validation | 50 words maximum per paragraph; no SC name or number; plain language |
+| `{{wcag_sc}}` | SC name and number | For example, `1.3.1 Info and Relationships` |
 | `{{severity}}` | The assigned severity level | As assigned in the validation record |
 | `{{wcag_techniques_url}}` | URL to the WCAG techniques page | Only used when `wcag_sc != "best practice"` |
 
@@ -144,7 +139,7 @@ Use the following template for every validation article. Sections marked **[cond
 
 ## Try It Yourself — common testing methods
 
-Include an H3 subsection for each method that applies to the validation. Common methods are listed below.
+Include an H3 subsection for each method that applies to the validation.
 
 | Method (H3 heading — sentence case) | When to include |
 |---|---|
@@ -153,17 +148,13 @@ Include an H3 subsection for each method that applies to the validation. Common 
 | Inspecting the browser's accessibility tree | When the issue involves ARIA roles, states, or properties |
 | Testing color contrast | When the issue involves contrast ratios |
 
-Each subsection must follow this structure. **Steps to follow:** appears immediately above the numbered steps, with no blank line between the label and the first step.
+Each subsection must follow this structure. **Steps to follow:** appears immediately above the numbered steps with no blank line between the label and the first step.
 
 ```markdown
 **Steps to follow:**
 1. {{step}}
 
-**Expected results**
+**Expected results:** {{expected_result}}
 
-{{expected_result}}
-
-**Actual results**
-
-{{actual_result}}
+**Actual results:** {{actual_result}}
 ```

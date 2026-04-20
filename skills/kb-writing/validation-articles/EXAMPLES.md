@@ -28,20 +28,20 @@ Examples cover two entry types:
 
 **Placeholder text must not be used as a substitute for a label.**
 
-Input fields need a visible, persistent label so users always know what information to enter. Placeholder text disappears once a user starts typing, which means the field's purpose is no longer communicated — to the user or to assistive technology.
+Input fields need a visible, persistent label so users always know what information to enter. Placeholder text disappears once a user starts typing, which means the field's purpose is no longer communicated to the user or to assistive technology.
 
 When a field relies on placeholder text alone, users who return to the field after entering data have no way to confirm what the field asked for. People with cognitive disabilities are especially affected by this.
 
 ### Pass Patterns
 
-A visible `<label>` element is associated with the input using a matching `for` and `id` attribute pair. The placeholder is optional and supplements — not replaces — the label.
+An input has a visible `<label>` element associated using a matching `for` and `id` attribute pair.
 
 ```html
 <label for="email">Email address</label>
 <input type="email" id="email" placeholder="name@example.com">
 ```
 
-A visible label is also provided when using `aria-labelledby` to associate a separate element as the accessible name.
+An input uses `aria-labelledby` to associate a separate element as its accessible name.
 
 ```html
 <p id="email-label">Email address</p>
@@ -50,13 +50,13 @@ A visible label is also provided when using `aria-labelledby` to associate a sep
 
 ### Fail Patterns
 
-No `<label>` element is present. The input relies entirely on placeholder text, which is not exposed as an accessible name by assistive technology.
+An input relies entirely on placeholder text with no `<label>` element.
 
 ```html
 <input type="email" placeholder="Email address">
 ```
 
-The `<label>` element is present in the HTML but is visually hidden using CSS in a way that removes it from the accessibility tree, leaving assistive technology with no accessible name.
+CSS hides the `<label>` element from the accessibility tree, leaving the input without an accessible name.
 
 ```html
 <label for="email" style="display: none;">Email address</label>
@@ -79,67 +79,52 @@ The `<label>` element is present in the HTML but is visually hidden using CSS in
 
 #### Failure techniques
 
-[F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type "image"](https://www.w3.org/WAI/WCAG21/Techniques/failures/F65)
+[F68: Failure of Success Criterion 1.3.1 and 4.1.2 due to the association of label and user interface controls not being programmatically determinable](https://www.w3.org/WAI/WCAG21/Techniques/failures/F68)
 
 ### Try It Yourself
 
 #### Using a screen reader
 
 **Steps to follow:**
-
 1. Open a screen reader.
 2. Navigate to a form that uses placeholder text as the only label.
 3. Move focus to the input field using the screen reader.
 
-**Expected results**
+**Expected results:** The screen reader reads the field's accessible name, indicating its purpose.
 
-The screen reader reads the field's accessible name, indicating its purpose.
-
-**Actual results**
-
-The screen reader reads only the placeholder text, or announces the field with no name at all.
+**Actual results:** The screen reader reads only the placeholder text, or announces the field with no name at all.
 
 #### Using a keyboard
 
 **Steps to follow:**
-
 1. Navigate to the input field using the Tab key.
 2. Type something into the field.
 3. Navigate away from the field, then Tab back to it.
 
-**Expected results**
+**Expected results:** The field still communicates its purpose after you return to it.
 
-The field still communicates its purpose after you return to it.
-
-**Actual results**
-
-The placeholder text is no longer visible, and there is no persistent label to identify the field.
+**Actual results:** The placeholder text is no longer visible, and there is no persistent label to identify the field.
 
 #### Inspecting the browser's accessibility tree
 
 **Steps to follow:**
-
 1. Open your browser's developer tools.
 2. Go to the Accessibility panel.
 3. Select the input field and inspect its accessible name.
 
-**Expected results**
+**Expected results:** The input has an accessible name that describes its purpose.
 
-The input has an accessible name that describes its purpose.
-
-**Actual results**
-
-The accessible name is empty, or it matches the placeholder text rather than a proper label.
+**Actual results:** The accessible name is empty, or it matches the placeholder text rather than a proper label.
 
 ### FAQ
 
 **Why is this issue marked as critical?**
 
-This issue is critical because people who use assistive technology — particularly screen reader users — have no reliable way to determine the purpose of an unlabeled field. Without an accessible name, a screen reader may announce only the input type, such as "edit text," giving no indication of what information to enter. This affects form completion across all assistive technology and browser combinations.
+This issue is critical because people who use assistive technology, such as screen reader users, have no reliable way to determine the purpose of an unlabeled field. Without an accessible name, a screen reader may announce only the input type, such as "edit text," giving no indication of what information to enter. This affects form completion across all assistive technology and browser combinations.
 
 **How does this issue relate to SC 1.3.1 Info and Relationships?**
 
-SC 1.3.1 requires that information, structure, and relationships conveyed through presentation can also be determined programmatically. A label that exists only as placeholder text cannot be determined programmatically once a user has interacted with the field. An explicit `<label>` element or an `aria-label` / `aria-labelledby` association is required to meet this criterion.
+SC 1.3.1 requires that information, structure, and relationships conveyed through presentation can also be determined programmatically. A label that exists only as placeholder text cannot be determined programmatically once a user has interacted with the field. You need an explicit `<label>` element, an `aria-label` attribute, or an `aria-labelledby` attribute to meet this criterion.
 
 ---
 
@@ -161,11 +146,11 @@ SC 1.3.1 requires that information, structure, and relationships conveyed throug
 
 The `title` attribute is not consistently exposed across assistive technology and browsers. When it repeats text that is already visible or already provided as an accessible name, it adds no value for most users. In some configurations, it can create a confusing double-announcement for screen reader users.
 
-Relying on `title` to convey important information is not reliable. If content is meaningful, it belongs in the visible text, in an accessible name, or in a `<label>` element — not only in a `title` attribute.
+Relying on `title` to convey important information is not reliable. If content is meaningful, it belongs in the visible text, in an accessible name, or in a `<label>` element, not only in a `title` attribute.
 
 ### Pass Patterns
 
-The `title` attribute is absent. The input's purpose is communicated through an explicit `<label>` element.
+An input uses an explicit `<label>` element without relying on the `title` attribute.
 
 ```html
 <label for="search">Search</label>
@@ -174,7 +159,7 @@ The `title` attribute is absent. The input's purpose is communicated through an 
 
 ### Fail Patterns
 
-The `title` attribute duplicates the visible button text. This creates a redundant tooltip that some screen readers announce in addition to the button's accessible name.
+A button's `title` attribute contains the same text as its visible label.
 
 ```html
 <button title="Submit form">Submit form</button>
@@ -185,18 +170,13 @@ The `title` attribute duplicates the visible button text. This creates a redunda
 #### Inspecting the browser's accessibility tree
 
 **Steps to follow:**
-
 1. Open your browser's developer tools.
 2. Go to the Accessibility panel.
 3. Select the element with a `title` attribute and inspect its accessible name and description.
 
-**Expected results**
+**Expected results:** The element's accessible name and description are distinct and each conveys unique information.
 
-The element's accessible name and description are distinct and each conveys unique information.
-
-**Actual results**
-
-The accessible name and description contain identical text, indicating the `title` attribute is redundant.
+**Actual results:** The accessible name and description contain identical text, indicating the `title` attribute is redundant.
 
 ### FAQ
 
