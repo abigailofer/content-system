@@ -39,7 +39,7 @@ Rules for maintaining consistent voice across all content outputs. Applies to an
 
 1. Use contractions in UI copy.
 2. Do not use contractions in legal or compliance content.
-3. Prohibited: exclamation points (except one per success state), emoji in product UI, slang, idioms.
+3. Prohibited: exclamation points, emoji in product UI, slang, idioms.
 4. Prohibited: passive voice (unless actor is unknown), nominalization, undefined jargon.
 
 ## Prohibited Patterns
