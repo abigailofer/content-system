@@ -19,6 +19,9 @@ This folder contains global content rules that apply to all outputs produced usi
 | `accessibility.md` | Inclusive language, screen reader compatibility, cognitive load |
 | `localization.md` | Translation-ready patterns, locale-neutral content |
 | `legal-safety.md` | Regulated content, prohibited claims, required disclosures |
+| `glossary.md` | Product-specific terms used across Evinced content skills |
+| `words-to-avoid.md` | Canonical list of banned words and phrases with alternatives |
+| `words-to-use.md` | Preferred words and phrases across all content outputs |
 
 ## How Skills Use Shared Standards
 
