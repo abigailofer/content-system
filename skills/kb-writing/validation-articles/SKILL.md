@@ -64,7 +64,6 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 | Pass/fail pattern structure | Each code example must be preceded by a title that describes what the example shows. The title format depends on whether an explanation sentence follows: (1) if an explanation sentence is present, the title must be an H3 with no trailing period — it can be a concise noun phrase (for example, "Valid landmark role", "Misspelled role value"); (2) if no explanation sentence is present, the title must be body text (not a heading) and must be a full sentence with a verb in present tense that describes the example — not why it passes or fails (good: "A list contains the required `listitem` children"; bad: "A list with the required `listitem` children" — no verb; "A menu contains a list, which causes a semantics conflict" — explains the failure). Explanation sentences must be used consistently — if any pattern in the section has one, all patterns in that section must have one |
 | Code examples | Only include examples you are certain are correct — never speculate |
 | ARIA attributes, roles, states, landmark regions, form labels | Wrap in backticks |
-| Attribute references in prose | Always include the word "attribute" when referring to an HTML or ARIA attribute in prose — for example, "the `alt` attribute", not "the `alt`" |
 | Bullet points | No period for fragments; period required for full sentences |
 | H1 and H2 headings | Title Case (MLA rules) |
 | H3 and H4 headings | Sentence case |
@@ -80,7 +79,7 @@ Capitalize the first and last word and every major word (nouns, pronouns, verbs,
 ### Words and phrases to avoid
 Write at Grade 9 reading level. Avoid words that are too formal, literary, or academic for everyday use. If a simpler word exists, use it.
 
-Do not use: Additionally, Anomalous (use "unusual" or "unexpected"), Ascertain (use "find out" or "check"), Bespoke, Comprehensive, Constitute (use "form" or "make up"), Curate, Cutting-edge, Delve into, e.g. / i.e. (use "for example", "such as", or "like"), Effortlessly, Empower/Empowering, Endeavor/Endeavour (use "try"), Erroneous (use "incorrect" or "wrong"), etc. (use "and so on"), Facilitate (use "help" or "allow"), Foster, Furthermore, Harness, Holistic approach, In the realm of, In today's fast-paced world, Indeed, Innovative solutions, It's important to understand that, It's worth noting that, Leverage, Mitigate (use "reduce" or "limit"), Moreover, Myriad (of), Navigate (challenges), Necessitate (use "require"), Nonsensical (use "makes no sense" or "confusing"), Optimal/Optimize, Paradigm shift, Plethora (of), Robust (unless referring to WCAG), Seamless/Seamlessly, See/Open (use "refer to"), Show (use "indicate"), Streamline, Superfluous (use "unnecessary" or "extra"), Supersede (use "replace"), Synergy/Synergistic, Undoubtedly, Utilize (use "use").
+Refer to [`shared/words-to-avoid.md`](../../../shared/words-to-avoid.md) for the full list.
 
 ### Accessibility terminology
 - Use "people with disabilities," not "disabled people"

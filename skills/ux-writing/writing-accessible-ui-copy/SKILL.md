@@ -404,6 +404,6 @@ modal:
 - [Reducing cognitive load](../../content-design/reducing-cognitive-load/SKILL.md)
 
 ## Reference
-- [Glossary](../../reference/glossary.md)
-- [Words to use](../../reference/words-to-use.md)
-- [Words to avoid](../../reference/words-to-avoid.md)
+- [Glossary](../../../shared/glossary.md)
+- [Words to use](../../../shared/words-to-use.md)
+- [Words to avoid](../../../shared/words-to-avoid.md)

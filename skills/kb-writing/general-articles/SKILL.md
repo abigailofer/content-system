@@ -81,7 +81,9 @@ Write as a knowledgeable guide, not a gatekeeper. Favor recommendations over dir
 - Note text goes in a self-contained callout prefaced by "Note:"
 
 ### Words and phrases to avoid
-Do not use: Additionally, Bespoke, Comprehensive, Curate, Cutting-edge, Delve into, e.g. / i.e. (use "for example", "such as", or "like"), Effortlessly, Empower/Empowering, etc. (use "and so on"), Foster, Furthermore, Harness, Holistic approach, In the realm of, In today's fast-paced world, Indeed, Innovative solutions, It's important to understand that, It's worth noting that, Leverage, Moreover, Myriad (of), Navigate (challenges), Optimal/Optimize, Paradigm shift, Plethora (of), Robust (unless referring to WCAG), Seamless/Seamlessly, See/Open (use "refer to"), Show (use "indicate"), Streamline, Synergy/Synergistic, Undoubtedly, Utilize (use "use").
+Write at Grade 9 reading level. Avoid words that are too formal, literary, or academic for everyday use. If a simpler word exists, use it.
+
+Refer to [`shared/words-to-avoid.md`](../../../shared/words-to-avoid.md) for the full list.
 
 ### Accessibility terminology
 - Use "people with disabilities," not "disabled people"

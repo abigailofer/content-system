@@ -57,6 +57,8 @@ Quick-match triggers to skills. See `governance/skill-catalog.md` for full detai
 
 **research-and-insights:** `synthesizing-user-research` (user research, research synthesis) · `extracting-insights-from-feedback` (feedback analysis, user feedback) · `structuring-content-audit-reports` (audit report, content audit findings) · `writing-research-summaries` (research summary, findings) · `mapping-qualitative-to-quantitative` (qual to quant, mixed methods) · `designing-interview-guides` (interview guide, user interview) · `analyzing-survey-results` (survey analysis, survey data) · `creating-content-opportunity-maps` (opportunity map, content gaps)
 
+**cross-cutting:** `a11y-content-annotations` (a11y annotations, ARIA annotations, accessibility annotations, annotation review, review annotations, ARIA review)
+
 ## Skill Package Structure
 
 Every skill folder contains:

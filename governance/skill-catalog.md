@@ -195,6 +195,16 @@ None currently.
 
 ---
 
+## cross-cutting
+
+Skills that span multiple content categories or disciplines.
+
+| Skill | Purpose | Triggers |
+|-------|---------|----------|
+| `a11y-content-annotations` | Review accessibility annotations for style, completeness, correctness, and consistency | a11y annotations, ARIA annotations, accessibility annotations, annotation review, review annotations, ARIA review |
+
+---
+
 ## Adding a Skill
 
 1. Verify no existing skill covers the same scope.
