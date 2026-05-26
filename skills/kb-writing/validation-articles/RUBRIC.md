@@ -47,7 +47,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Recommended Reading section, if present, uses the exact heading "Recommended Reading" and appears after FAQ
 
 ### Style
-- [ ] ARIA attributes, roles, states, landmark regions, and form labels are wrapped in backticks
+- [ ] ARIA attributes, roles, states, landmark regions, and form labels are wrapped in backticks in all prose — including FAQ question text, step-by-step instructions, and headings; shorthand references such as "Allowed-attr" are not acceptable substitutes for the full backtick-wrapped name (for example, `aria-allowed-attr`); ARIA state names referenced as announced values (such as "checked", "pressed", "selected") use backticks, not quotation marks
 - [ ] No periods at the end of bullet-point fragments
 - [ ] Periods present on bullet points that are full sentences
 - [ ] H1 and H2 headings use Title Case (MLA rules)
@@ -88,7 +88,9 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] ACT Rules section uses a heading other than "ACT Rules"
 
 ### Style
-- [ ] ARIA terms appear without backticks
+- [ ] An ARIA term appears without backticks anywhere in the prose — including inside FAQ question headings and step text
+- [ ] An ARIA attribute or rule name is shortened or abbreviated in prose (for example, "Allowed-attr" instead of `aria-allowed-attr`)
+- [ ] ARIA state names referenced as announced values (for example, "checked", "pressed", "selected") use quotation marks instead of backticks
 - [ ] Periods appear at the end of bullet-point fragments
 - [ ] H3 or H4 headings use Title Case instead of sentence case
 - [ ] British English spelling used ("cancelled", "labelled", "pop-up", and so on)
@@ -110,6 +112,6 @@ Run before delivering any validation article:
 - [ ] Related WCAG Techniques section included only when applicable; technique boxes are linked
 - [ ] Try It Yourself has an H3 per testing method with Steps to follow:, Expected results:, and Actual results: — each label inline with its content
 - [ ] Both required FAQ items are present and use the correct phrasing for the entry type
-- [ ] ARIA terms are wrapped in backticks
+- [ ] ARIA terms are wrapped in backticks everywhere in prose — scan every section including FAQ question text and step instructions; check for shorthand forms (for example, "Allowed-attr") and state value names in quotation marks (for example, "checked", "pressed")
 - [ ] American English spelling used throughout
 - [ ] No banned words present
