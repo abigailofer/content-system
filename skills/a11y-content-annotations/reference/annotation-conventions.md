@@ -1,111 +1,75 @@
 # Accessibility Annotation Conventions
 
-Industry-standard conventions for writing a11y annotations. These apply when no team style guide overrides them.
+Conventions for writing a11y **content** annotations. These apply when no team style guide overrides them.
 
 ---
 
-## Role notation
+## Division of responsibilities
 
-- Write roles in lowercase matching the ARIA spec: `button`, `checkbox`, `dialog`, `listbox`, `combobox`, `tabpanel`
-- Use the format `role: <role-name>` or a clear label such as "ARIA role: combobox"
-- Do not write role names in ALL CAPS
-- For landmark roles, use the semantic term: `banner`, `main`, `navigation`, `complementary`, `contentinfo`, `form`, `search`, `region`
+| Responsibility | Owner |
+|---|---|
+| Accessible names — `aria-label`, `aria-labelledby` values | Content annotator (this skill) |
+| Descriptions — `aria-describedby` values | Content annotator (this skill) |
+| Image alt text | Content annotator (this skill) |
+| Landmark and region labels | Content annotator (this skill) |
+| ARIA roles | A11y engineer |
+| ARIA states — `aria-selected`, `aria-expanded`, `aria-checked`, `aria-pressed`, etc. | A11y engineer |
+| Focus management and keyboard interaction | A11y engineer |
+| Reading order and focus order | A11y engineer |
+| `aria-controls`, `aria-owns`, `aria-haspopup`, live regions | A11y engineer |
+
+---
+
+## Tooling
+
+Use **Figma's native annotations tool** to attach annotations to nodes. Do not create custom annotation frames, sticky notes, or overlay layers.
 
 ---
 
 ## Accessible name notation
 
-- Use `label: "<text>"` or `accessible name: "<text>"` for static names
-- When referencing another element: `aria-labelledby: <element-id>` or "labelled by: [element description]"
-- When the name comes from a native HTML label: "labelled by visible text" — no need to repeat the value
-- Wrap the accessible name value in quotes to make the exact string clear
+- Write the exact ARIA attribute and value: `aria-label="<text>"` or `aria-labelledby="<id>"`
+- When using `aria-labelledby`, also annotate the referenced element with its `id`: `id="<id>"`
+- Wrap the value in double quotes to make the exact string unambiguous
+- When a visible label already provides a clear, unambiguous accessible name, no annotation is needed
 
 ---
 
-## State notation
+## Landmark and region labels
 
-Write states using their ARIA attribute names and values:
-
-```
-aria-expanded: true | false
-aria-checked: true | false | mixed
-aria-pressed: true | false | mixed
-aria-selected: true | false
-aria-disabled: true  (omit when false)
-aria-invalid: true | grammar | spelling  (omit when false)
-```
-
-Always annotate the initial state and note which event changes it.
-
-**Example:**
-```
-aria-expanded: false → becomes true when trigger is activated
-```
-
----
-
-## Property notation
-
-- Write properties in lowercase hyphenated form: `aria-describedby`, `aria-controls`, `aria-owns`, `aria-haspopup`
-- Reference target elements by annotation ID or description: `aria-controls: [dropdown list]`
-- For `aria-haspopup`, specify the popup type: `aria-haspopup: listbox`, `aria-haspopup: dialog`
-
----
-
-## Reading order
-
-- Use numbered callouts or a sequential list: "Reading order: 1 → 2 → 3"
-- Explicitly note divergence from visual order: "Reading order differs from visual layout — [element A] announced before [element B]"
-- For focus order, note the first tab stop and progression through interactive elements
-
----
-
-## Focus management
-
-- Dialogs: "On open: focus moves to [element]" / "On close: focus returns to [trigger]"
-- Modal dialogs: "Focus contained within dialog while open"
-- Complex widgets: annotate arrow-key navigation separately from Tab navigation
-
----
-
-## Relationship notation
-
-| Property | Annotation format |
-|---|---|
-| `aria-controls` | "[Source] controls [target]" |
-| `aria-owns` | "[Parent] owns [child elements]" — use sparingly |
-| `aria-describedby` | "[Element] described by [description element]" |
-| `aria-flowto` | Note explicitly — rarely used |
-
----
-
-## Live regions
-
-- State politeness level explicitly: `aria-live: polite` or `aria-live: assertive`
-- Note `aria-atomic: true` when full region content is announced as a unit
-- Shorthand roles: `role: status` (polite, atomic), `role: alert` (assertive, atomic), `role: log` (polite, non-atomic)
-
----
-
-## Landmark annotations
-
-- Annotate each landmark region and its label
-- For labeled landmarks: `navigation: "Primary"` or `aria-label: "Site navigation"`
-- List all landmarks in page order to make structural completeness easy to verify
+- Annotate landmark regions that lack a visible heading: `aria-label="<region purpose>"`
+- For tab lists: `aria-label="<purpose of the tab group>"`
+- Do not annotate the landmark role — that is the a11y engineer's responsibility
 
 ---
 
 ## Images and icons
 
-- Decorative: `alt: ""` or "decorative — hidden from assistive technology"
-- Informative: `alt: "<description>"` — convey meaning, not appearance
-- Functional icon button: accessible name annotation required; do not rely on tooltip text
+- Decorative images: `alt=""` — confirms the image is intentionally hidden from assistive technology
+- Informative images: `alt="<description>"` — describe meaning, not appearance
+- Functional icon buttons have no visible label; an `aria-label` annotation is always required
+
+---
+
+## What to annotate
+
+| Element | Annotation needed |
+|---|---|
+| Icon-only buttons | `aria-label="<action>"` |
+| Links that open in a new tab/window | `aria-label="<link text> (opens in new window)"` |
+| Dialogs / modals | `aria-labelledby="<heading-id>"` + `id="<heading-id>"` on the heading |
+| Landmark regions without a visible heading | `aria-label="<region name>"` |
+| Tab lists | `aria-label="<purpose of tabs>"` |
+| Form fields without a visible label | `aria-label="<field name>"` |
+| Informative images | `alt="<meaningful description>"` |
+| Decorative images | `alt=""` |
 
 ---
 
 ## What to avoid
 
-- Do not annotate implementation details (CSS class names, DOM IDs) unless part of an ARIA relationship
-- Do not annotate default browser behavior that requires no override
-- Do not use "TBD" or "see dev" as an annotation value — fill it in or flag it as incomplete
-- Do not duplicate the visible label as an `aria-label` value — redundant and prone to mismatch
+- Do not annotate ARIA roles — that is the a11y engineer's responsibility
+- Do not annotate ARIA states (`aria-selected`, `aria-expanded`, `aria-checked`, etc.) — that is the a11y engineer's responsibility
+- Do not duplicate a visible label as an `aria-label` value — redundant and prone to mismatch if visible text changes
+- Do not annotate default browser behaviour that requires no override
+- Do not use "TBD" or "see dev" as an annotation value — provide the text or flag it as an open content decision
