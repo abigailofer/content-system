@@ -8,8 +8,8 @@ Capitalization, punctuation, formatting, and structure rules for all content out
 
 ### Capitalization
 
-1. Sentence case for UI text, headings, labels, buttons.
-2. Table column headers use title case.
+1. Sentence case for UI text, heading level 2, heading level 3, heading level 4, labels, links.
+2. Title case for heading level 1, buttons, table column headers.
 3. Proper nouns retain standard capitalization.
 4. Acronyms: all caps only if industry-standard (API, URL, SDK).
 5. Product-specific terms follow `governance/glossary.json`.
