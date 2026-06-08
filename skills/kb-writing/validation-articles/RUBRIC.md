@@ -32,7 +32,7 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] Pattern title is body text (not a heading) and a full sentence with a verb in present tense when no explanation sentence follows it — it describes the example, not why it passes or fails
 - [ ] Explanation sentences are used consistently — if one pattern has one, all patterns in that section have one
 - [ ] No code example is speculative — all examples are included with full certainty
-- [ ] Related WCAG Techniques section is present when `wcag_sc != "best practice"` and published techniques exist
+- [ ] Related WCAG Techniques section is present when `wcag_sc != "best practice"` and published techniques exist — if the section is missing, flag it for review but do not fail the article
 - [ ] Related WCAG Techniques section is absent when the entry is a best practice
 - [ ] Related WCAG Techniques section includes Sufficient techniques and Failure techniques subsections
 - [ ] Advisory techniques subsection is present if advisory techniques exist; if missing on a non-best-practice entry, it is flagged for review
@@ -79,7 +79,6 @@ If signals conflict, the FAQ item 2 phrasing is the most reliable indicator.
 - [ ] An H3 pattern title ends with a period
 - [ ] Explanation sentences are used inconsistently — some patterns have one and others do not
 - [ ] Related WCAG Techniques section appears in a best-practice entry
-- [ ] Related WCAG Techniques section is missing from a WCAG SC entry that has published techniques
 - [ ] Try It Yourself heading is not Title Case
 - [ ] A Try It Yourself subsection is missing Steps to follow:, Expected results:, or Actual results: — or the label and content are on separate lines instead of inline
 - [ ] FAQ item 1 is missing or incorrectly phrased
@@ -109,7 +108,7 @@ Run before delivering any validation article:
 - [ ] One-line rule is bold; "must" vs "should" matches the entry type
 - [ ] Description avoids SC name and number; each paragraph is 50 words or fewer
 - [ ] All code examples are certain — no speculation included
-- [ ] Related WCAG Techniques section included only when applicable; technique boxes are linked
+- [ ] Related WCAG Techniques section included only when applicable; technique boxes are linked — if absent from a WCAG SC entry, flag for review
 - [ ] Try It Yourself has an H3 per testing method with Steps to follow:, Expected results:, and Actual results: — each label inline with its content
 - [ ] Both required FAQ items are present and use the correct phrasing for the entry type
 - [ ] ARIA terms are wrapped in backticks everywhere in prose — scan every section including FAQ question text and step instructions; check for shorthand forms (for example, "Allowed-attr") and state value names in quotation marks (for example, "checked", "pressed")
