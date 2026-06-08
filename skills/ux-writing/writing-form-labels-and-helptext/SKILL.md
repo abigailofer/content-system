@@ -47,8 +47,8 @@ Follow these approved patterns (style guide §11.7.5):
 
 | Field type | Pattern | Example |
 |-----------|---------|---------|
-| Text field | `Enter {name}` | `Enter project name` |
-| Description/textarea | `Describe the {collection}` | `Describe the test scenario` |
+| Text field | `Example: {realistic value}` | `Example: Project name` |
+| Description/textarea | `Example: {realistic value}` | `Example: Groups issues by business unit` |
 | Email | Use example format | `name@example.com` |
 | Select/dropdown | `Select {property}` | `Select country` |
 | Search | `Search {item}` | `Search campaigns` |

@@ -96,8 +96,8 @@ form_field:
   label: "Bio"
   required: false
   input_type: "textarea"
-  placeholder: "Describe yourself"
-  # Placeholder pattern for description fields: Describe the {collection} — style guide §11.7.5
+  placeholder: "Example: Accessibility advocate with 5 years of experience"
+  # Placeholder pattern for description fields: Example: {realistic value} — style guide §11.7.5
   help_text: "Max 280 characters."
   optional_indicator: "(optional)"
   max_length: 280
@@ -111,8 +111,8 @@ Follow these approved patterns (style guide §11.7.5):
 
 | Field type | Pattern | Example |
 |-----------|---------|---------|
-| Text field | `Enter {name}` | `Enter project name` |
-| Description/textarea | `Describe the {collection}` | `Describe the test scenario` |
+| Text field | `Example: {realistic value}` | `Example: Project name` |
+| Description/textarea | `Example: {realistic value}` | `Example: Groups issues by business unit` |
 | Email | Use example format | `name@example.com` |
 | Select/dropdown | `Select {property}` | `Select country` |
 | Search | `Search {item}` | `Search campaigns` |
